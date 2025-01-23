@@ -46,7 +46,7 @@ def download_files(urls_array, base_path, hf_token):
         print(f"Downloading: {filename}")
 
         try:
-          if hf_token = '' :
+          if hf_token == '' :
               # Use wget with simplified progress output
               subprocess.run([
                   "wget",
