@@ -104,7 +104,7 @@ def delete_files(urls_array, base_path):
             print(f"Found file {full_path}...deleted!")
             os.remove(full_path)
         else:
-            print("Skipping file {full_path}...not found!")
+            print(f"Skipping file {full_path}...not found!")
             continue
 
 # List of URLS
