@@ -46,11 +46,10 @@ def download_files(urls_array, base_path, hf_token):
         print(f"Downloading: {filename}")
 
         try:
-          if hf_token == True :
+          if hf_token = '' :
               # Use wget with simplified progress output
               subprocess.run([
                   "wget",
-                  "--header", f"Authorization: Bearer {TOKEN}",
                   "-O", full_path,    # Output file
                   url,                # URL to download
                   "--quiet",          # Suppress wget's output
@@ -58,11 +57,11 @@ def download_files(urls_array, base_path, hf_token):
                   "--progress=bar:force:noscroll"  # Simple progress bar format
               ], check=True)
               print(f"Successfully downloaded: {filename}")
-
           else:
               # Use wget with simplified progress output
               subprocess.run([
                   "wget",
+                  "--header", f"Authorization: Bearer {hf_token}",
                   "-O", full_path,    # Output file
                   url,                # URL to download
                   "--quiet",          # Suppress wget's output
