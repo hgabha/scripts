@@ -1,3 +1,7 @@
+import subprocess
+from urllib.parse import urlparse
+import os
+
 def get_filename_from_url(url):
     """Extract filename from URL, removing query parameters"""
     # Parse the URL and get the path
