@@ -107,3 +107,96 @@ def delete_files(urls_array, base_path):
         else:
             print("Skipping file {full_path}...not found!")
             continue
+
+# List of URLS
+SD_URLS = [
+    {
+        "url": "https://huggingface.co/stable-diffusion-v1-5/stable-diffusion-v1-5/resolve/main/v1-5-pruned.safetensors?download=true",
+        "directory": "checkpoints",
+        "filename": ""
+    },
+    {
+        "url": "https://huggingface.co/stable-diffusion-v1-5/stable-diffusion-v1-5/resolve/main/vae/diffusion_pytorch_model.safetensors?download=true",
+        "directory": "vae",
+        "filename": "v1-5-vae.safetensors"
+    }
+]
+JUGGER15 = [
+    {
+        "url": "https://huggingface.co/KamCastle/jugg/resolve/main/juggernaut_reborn.safetensors",
+        "directory": "checkpoints",
+        "filename": ""
+    }
+]
+SDXL_URLS = [
+    {
+        "url": "https://huggingface.co/stabilityai/stable-diffusion-xl-base-1.0/resolve/main/sd_xl_base_1.0.safetensors?download=true",
+        "directory": "checkpoints", "filename": ""
+    },
+    {
+        "url": "https://huggingface.co/stabilityai/stable-diffusion-xl-refiner-1.0/resolve/main/sd_xl_refiner_1.0.safetensors?download=true",
+        "directory": "checkpoints", "filename": ""
+    },
+    {
+        "url": "https://huggingface.co/stabilityai/stable-diffusion-xl-base-1.0/resolve/main/vae/diffusion_pytorch_model.safetensors?download=true",
+        "directory": "vae", "filename": "sd_xl_VAE.safetensors"
+    }
+]
+#juggernaut Rundiffusion Lightning and SDXL model
+JUGGERSDXL = [
+    {
+        "url": "https://huggingface.co/RunDiffusion/Juggernaut-XL-Lightning/resolve/main/Juggernaut_RunDiffusionPhoto2_Lightning_4Steps.safetensors",
+        "directory": "checkpoints", "filename": ""
+    },
+    {
+        "url": "    https://huggingface.co/RunDiffusion/Juggernaut-XL-v9/resolve/main/Juggernaut-XL_v9_RunDiffusionPhoto_v2.safetensors",
+        "directory": "checkpoints", "filename": ""
+    }
+]
+
+OG_SUPIR = [
+    {
+        "url": "https://huggingface.co/camenduru/SUPIR/resolve/main/SUPIR-v0F.ckpt?download=true",
+        "directory": "checkpoints", "filename": ""
+    },
+    {
+        "url": "https://huggingface.co/camenduru/SUPIR/resolve/main/SUPIR-v0Q.ckpt?download=true",
+        "directory": "checkpoints", "filename": ""
+    }
+]
+FLUX_DEV = [
+    {
+        "url": "https://huggingface.co/black-forest-labs/FLUX.1-dev/resolve/main/ae.safetensors?download=true",
+        "directory": "vae", "filename": ""
+    },
+    {
+        "url": "https://huggingface.co/black-forest-labs/FLUX.1-dev/resolve/main/flux1-dev.safetensors?download=true",
+        "directory": "checkpoints", "filename": ""
+    }
+]
+FLUX_SCHNELL = [
+    {
+        "url": "https://huggingface.co/black-forest-labs/FLUX.1-schnell/resolve/main/flux1-schnell.safetensors?download=true",
+        "directory": "vae", "filename": ""
+    },
+]
+FLUX_CLIP = [
+    {
+        "url": "https://huggingface.co/comfyanonymous/flux_text_encoders/resolve/main/t5xxl_fp16.safetensors?download=true",
+        "directory": "clip", "filename": ""
+    },
+    {
+        "url": "https://huggingface.co/comfyanonymous/flux_text_encoders/resolve/main/clip_l.safetensors?download=true",
+        "directory": "clip", "filename": ""
+    },
+    {
+        "url": "https://huggingface.co/comfyanonymous/flux_text_encoders/resolve/main/t5xxl_fp8_e4m3fn.safetensors?download=true",
+        "directory": "clip", "filename": ""
+    }
+]
+FLUX_LORA = [
+    {
+        "url": "https://huggingface.co/comfyanonymous/flux_RealismLora_converted_comfyui/resolve/main/flux_realism_lora.safetensors?download=true",
+        "directory": "loras/flux", "filename": ""
+    },
+]
