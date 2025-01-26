@@ -163,6 +163,26 @@ OG_SUPIR = [
         "directory": "checkpoints", "filename": ""
     }
 ]
+KIJAI_SUPIR = [
+    {
+        "url": "https://huggingface.co/Kijai/SUPIR_pruned/resolve/main/SUPIR-v0F_fp16.safetensors?download=true",
+        "directory": "checkpoints", "filename": "Kijai_SUPIR-V0F_fp16.safetensors"
+    },
+    {
+        "url": "https://huggingface.co/Kijai/SUPIR_pruned/resolve/main/SUPIR-v0Q_fp16.safetensors?download=true",
+        "directory": "checkpoints", "filename": "Kijai_SUPIR-V0Q_fp16.safetensors"
+    }
+]
+AURASR = [
+    {
+        "url": "https://huggingface.co/fal/AuraSR/resolve/main/model.safetensors?download=true",
+        "directory": "Aura-SR", "filename": ""
+    },
+    {
+        "url": "https://huggingface.co/fal/AuraSR/resolve/main/config.json?download=true",
+        "directory": "Aura-SR", "filename": ""
+    }
+]
 FLUX_DEV = [
     {
         "url": "https://huggingface.co/black-forest-labs/FLUX.1-dev/resolve/main/ae.safetensors?download=true",
