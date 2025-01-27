@@ -1,3 +1,5 @@
+import ipywidgets as widgets
+from IPython.display import display
 import subprocess
 from urllib.parse import urlparse
 import os # Add this line to import the os module
@@ -106,6 +108,48 @@ def delete_files(urls_array, base_path):
         else:
             print(f"Skipping file {full_path}...not found!")
             continue
+
+def upload_handler(folder):
+    # Get the list of folder names in /usr, sorted alphabetically
+    folder_names = sorted([f for f in os.listdir(folder) if os.path.isdir(os.path.join(folder, f))])
+
+    # Create the dropdown widget
+    dropdown = widgets.Dropdown(
+        options=folder_names,
+        value=folder_names[0] if folder_names else None,  # Set initial value to the first folder
+        description='Folders in /usr:',
+        disabled=False,
+    )
+
+    # Create the text input widget for the URL
+    url_input = widgets.Text(
+        value='',
+        placeholder='Enter URL',
+        description='URL:',
+        disabled=False
+    )
+
+# Function to handle the button click (you can replace this with your desired action)
+def handle_submit(sender):
+    url = url_input.value
+    
+    # Check if the URL starts with "https://huggingface" and doesn't already have "?download=true"
+    if url.startswith("https://huggingface") and "?download=true" not in url:  
+        url += "?download=true"  # Append the suffix
+
+    CUSTOM_URL = [
+    {
+        "url": url_input.value,
+        "directory": dropdown.value,
+        "filename": ""
+    }
+    ]
+    print(f"Selected folder: {dropdown.value}")
+    print(f"Entered URL: {url_input.value}")
+    #print(f"Selected folder: {CUSTOM_URL[0][url]")
+    #print(f"Entered URL: {CUSTOM_URL[0][.]directory]")
+    download_files(CUSTOM_URL, BASE_PATH,'')
+
 
 # List of URLS
 SD_URLS = [
