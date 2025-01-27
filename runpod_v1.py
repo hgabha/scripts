@@ -78,7 +78,7 @@ def download_files(urls_array, base_path, hf_token):
 def delete_files(urls_array, base_path):
     # Get number of array entries
     num_urls = len(urls_array)
-    print(f"Found {num_urls} files to delete")
+    #print(f"Found {num_urls} files to delete")
     #print(f"Using base path: {base_path}")
 
     for idx, entry in enumerate(urls_array, 1):
@@ -217,5 +217,19 @@ FLUX_LORA = [
     {
         "url": "https://huggingface.co/comfyanonymous/flux_RealismLora_converted_comfyui/resolve/main/flux_realism_lora.safetensors?download=true",
         "directory": "loras/flux", "filename": ""
+    },
+]
+FLUX_LORA_ARAMINTA = [
+    {
+        "url": "https://huggingface.co/alvdansen/flux-koda/resolve/main/araminta_k_flux_koda.safetensors?download=true",
+        "directory": "loras/araminta", "filename": "flmft-style_flux_koda.safetensors"
+    },
+    {
+        "url": "https://huggingface.co/alvdansen/frosting_lane_flux/resolve/main/flux_dev_frostinglane_araminta_k.safetensors?download=true",
+        "directory": "loras/araminta", "filename": "frstingln-illustration_flux_dev_frostinglane.safetensors"
+    },
+    {
+        "url": "https://huggingface.co/alvdansen/flux_film_foto/resolve/main/araminta_k_flux_film_foto.safetensors?download=true",
+        "directory": "loras/araminta", "filename": "flmft-photo-style_flux_film_foto.safetensors"
     },
 ]
