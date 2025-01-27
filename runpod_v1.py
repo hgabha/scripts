@@ -128,6 +128,12 @@ def upload_handler(folder):
         description='URL:',
         disabled=False
     )
+    # Display the widgets. Create a button to submit the form (optional)
+    display(dropdown)
+    display(url_input)
+    submit_button = widgets.Button(description="Submit")
+    submit_button.on_click(handle_submit)
+    display(submit_button)
 
 # Function to handle the button click (you can replace this with your desired action)
 def handle_submit(sender):
