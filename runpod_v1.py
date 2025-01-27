@@ -1,6 +1,7 @@
 import subprocess
 from urllib.parse import urlparse
 import os # Add this line to import the os module
+from IPython.display import display, Javascript
 
 def get_filename_from_url(url):
     """Extract filename from URL, removing query parameters"""
@@ -107,6 +108,9 @@ def delete_files(urls_array, base_path):
             print(f"Skipping file {full_path}...not found!")
             continue
 
+def create_alert(message):
+  display(Javascript(f'alert("{message}");'))
+    
 # List of URLS
 SD_URLS = [
     {
