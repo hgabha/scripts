@@ -1,5 +1,3 @@
-import ipywidgets as widgets
-from IPython.display import display
 import subprocess
 from urllib.parse import urlparse
 import os # Add this line to import the os module
