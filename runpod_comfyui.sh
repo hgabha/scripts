@@ -17,5 +17,6 @@ git clone https://github.com/ltdrdata/ComfyUI-Manager custom_nodes/ComfyUI-Manag
 pip install -r custom_nodes/ComfyUI-Manager/requirements.txt
 
 git clone https://github.com/cubiq/ComfyUI_essentials custom_nodes/ComfyUI_essentials
-git clone https://github.com/crystian/ComfyUI-Crystools /{dest_folder}/ComfyUI/custom_nodes/ComfyUI-Crystools
-pip install -r /{dest_folder}/ComfyUI/custom_nodes/ComfyUI-Crystools/requirements.txt
+git clone https://github.com/crystian/ComfyUI-Crystools /workspace/ComfyUI/custom_nodes/ComfyUI-Crystools
+pip install -r /workspace/ComfyUI/custom_nodes/ComfyUI-Crystools/requirements.txt
+deactivate
