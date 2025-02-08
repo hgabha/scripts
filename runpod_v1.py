@@ -223,6 +223,12 @@ FLUX_LORA = [
         "directory": "loras/flux", "filename": ""
     },
 ]
+FLUX_CNET = [
+    {
+        "url": "https://huggingface.co/Shakker-Labs/FLUX.1-dev-ControlNet-Union-Pro/resolve/main/diffusion_pytorch_model.safetensors?download=true",
+        "directory": "controlnet", "filename": "FLUX.1-dev-ControlNet-Union-Pro.safetensors"
+    },
+]
 FLUX_LORA_ARAMINTA = [
     {
         "url": "https://huggingface.co/alvdansen/flux-koda/resolve/main/araminta_k_flux_koda.safetensors?download=true",
