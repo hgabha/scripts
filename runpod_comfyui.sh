@@ -4,9 +4,14 @@ cd ComfyUI
 apt-get update
 python -m venv venv
 source venv/bin/activate
+echo "Virtual Environment created VENV & activated"
 #git pull
 #pip install --upgrade pip
-pip install -r requirements.txt --extra-index-url https://download.pytorch.org/whl/cu124
+#--extra-index-url https://download.pytorch.org/whl/cu124
+echo "Installing requirements"
+pip install -r requirements.txt 
+
+echo "Installing Custom Nodes"
 
 git clone https://github.com/ltdrdata/ComfyUI-Manager custom_nodes/ComfyUI-Manager
 pip install -r custom_nodes/ComfyUI-Manager/requirements.txt
