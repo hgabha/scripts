@@ -194,7 +194,7 @@ FLUX_DEV = [
     },
     {
         "url": "https://huggingface.co/black-forest-labs/FLUX.1-dev/resolve/main/flux1-dev.safetensors?download=true",
-        "directory": "checkpoints", "filename": ""
+        "directory": "unet", "filename": ""
     }
 ]
 FLUX_SCHNELL = [
