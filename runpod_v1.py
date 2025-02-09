@@ -243,3 +243,9 @@ FLUX_LORA_ARAMINTA = [
         "directory": "loras/araminta", "filename": "flmft-photo-style_flux_film_foto.safetensors"
     },
 ]
+ULTRA_BBOX = [
+    {
+        "url": "https://huggingface.co/camenduru/IICF/resolve/main/ultralytics/bbox/Eyes.pt?download=true",
+        "directory": "ultralytics/bbox", "filename": "Eyes.pt"
+    },
+]
