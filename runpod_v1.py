@@ -249,3 +249,37 @@ ULTRA_BBOX = [
         "directory": "ultralytics/bbox", "filename": "Eyes.pt"
     },
 ]
+WAN21_T2V = [
+    {
+        "url": "https://huggingface.co/Comfy-Org/Wan_2.1_ComfyUI_repackaged/resolve/main/split_files/diffusion_models/wan2.1_t2v_1.3B_bf16.safetensors?download=true",
+        "directory": "diffusion_models", "filename": ""
+    },
+    {
+        "url": "https://huggingface.co/Comfy-Org/Wan_2.1_ComfyUI_repackaged/resolve/main/split_files/diffusion_models/wan2.1_t2v_14B_bf16.safetensors?download=true",
+        "directory": "diffusion_models", "filename": ""
+    },    
+]
+WAN21_I2V = [
+    {
+        "url": "https://huggingface.co/Comfy-Org/Wan_2.1_ComfyUI_repackaged/resolve/main/split_files/diffusion_models/wan2.1_i2v_480p_14B_bf16.safetensors?download=true",
+        "directory": "diffusion_models", "filename": ""
+    },
+    {
+        "url": "https://huggingface.co/Comfy-Org/Wan_2.1_ComfyUI_repackaged/resolve/main/split_files/diffusion_models/wan2.1_i2v_720p_14B_bf16.safetensors?download=true",
+        "directory": "diffusion_models", "filename": ""
+    },
+]
+WAN21_MISC = [
+    {
+        "url": "https://huggingface.co/Comfy-Org/Wan_2.1_ComfyUI_repackaged/resolve/main/split_files/text_encoders/umt5_xxl_fp16.safetensors?download=true",
+        "directory": "text_encoders", "filename": ""
+    },
+    {
+        "url": "https://huggingface.co/Comfy-Org/Wan_2.1_ComfyUI_repackaged/resolve/main/split_files/vae/wan_2.1_vae.safetensors?download=true",
+        "directory": "vae", "filename": ""
+    },
+    {
+        "url": "https://huggingface.co/Comfy-Org/Wan_2.1_ComfyUI_repackaged/resolve/main/split_files/clip_vision/clip_vision_h.safetensors?download=true",
+        "directory": "clip_vision", "filename": ""
+    },
+]
