@@ -283,3 +283,41 @@ WAN21_MISC = [
         "directory": "clip_vision", "filename": ""
     },
 ]
+WAN21_KIJAI = [
+    {
+        "url": "https://huggingface.co/Kijai/WanVideo_comfy/resolve/main/Wan2_1-I2V-14B-480P_fp8_e4m3fn.safetensors?download=true",
+        "directory": "diffusion_models", "filename": ""
+    },
+    {
+        "url": "https://huggingface.co/Kijai/WanVideo_comfy/resolve/main/Wan2_1-I2V-14B-720P_fp8_e4m3fn.safetensors?download=true",
+        "directory": "diffusion_models", "filename": ""
+    },    
+    {
+        "url": "https://huggingface.co/Kijai/WanVideo_comfy/resolve/main/Wan2_1-T2V-14B_fp8_e4m3fn.safetensors?download=true",
+        "directory": "diffusion_models", "filename": ""
+    },
+    {
+        "url": "https://huggingface.co/Kijai/WanVideo_comfy/resolve/main/umt5-xxl-enc-fp8_e4m3fn.safetensors?download=true",
+        "directory": "text_encoders", "filename": ""
+    },
+    {
+        "url": "https://huggingface.co/Kijai/WanVideo_comfy/resolve/main/umt5-xxl-enc-bf16.safetensors?download=true",
+        "directory": "text_encoders", "filename": ""
+    },
+    {
+        "url": "https://huggingface.co/Kijai/WanVideo_comfy/resolve/main/Wan2_1_VAE_bf16.safetensors?download=true",
+        "directory": "vae", "filename": ""
+    },
+    {
+        "url": "https://huggingface.co/Kijai/WanVideo_comfy/resolve/main/Wan2_1_VAE_fp32.safetensors?download=true",
+        "directory": "vae", "filename": ""
+    },
+    {
+        "url": "https://huggingface.co/Kijai/WanVideo_comfy/resolve/main/open-clip-xlm-roberta-large-vit-huge-14_fp16.safetensors?download=true",
+        "directory": "clip_vision", "filename": ""
+    },
+    {
+        "url": "https://huggingface.co/Kijai/WanVideo_comfy/resolve/main/open-clip-xlm-roberta-large-vit-huge-14_visual_fp32.safetensors?download=true",
+        "directory": "clip_vision", "filename": ""
+    },
+]
