@@ -314,10 +314,10 @@ WAN21_KIJAI = [
     },
     {
         "url": "https://huggingface.co/Kijai/WanVideo_comfy/resolve/main/open-clip-xlm-roberta-large-vit-huge-14_fp16.safetensors?download=true",
-        "directory": "clip_vision", "filename": ""
+        "directory": "clip", "filename": ""
     },
     {
         "url": "https://huggingface.co/Kijai/WanVideo_comfy/resolve/main/open-clip-xlm-roberta-large-vit-huge-14_visual_fp32.safetensors?download=true",
-        "directory": "clip_vision", "filename": ""
+        "directory": "clip", "filename": ""
     },
 ]
