@@ -200,7 +200,31 @@ FLUX_DEV = [
 FLUX_SCHNELL = [
     {
         "url": "https://huggingface.co/black-forest-labs/FLUX.1-schnell/resolve/main/flux1-schnell.safetensors?download=true",
-        "directory": "vae", "filename": ""
+        "directory": "unet", "filename": ""
+    },
+]
+FLUX_TOOLS = [
+    {
+        "url": "https://huggingface.co/black-forest-labs/FLUX.1-Fill-dev/resolve/main/flux1-fill-dev.safetensors?download=true",
+        "directory": "unet", "filename": ""
+    },
+    {
+        "url": "https://huggingface.co/black-forest-labs/FLUX.1-Redux-dev/resolve/main/flux1-redux-dev.safetensors?download=true",
+        "directory": "style_models", "filename": ""
+    },
+    {
+        "url": "https://huggingface.co/Comfy-Org/sigclip_vision_384/resolve/main/sigclip_vision_patch14_384.safetensors?download=true",
+        "directory": "clip_vision", "filename": ""
+    },
+]
+FLUX_TOOLS_LORA = [
+    {
+        "url": "https://huggingface.co/black-forest-labs/FLUX.1-Depth-dev-lora/resolve/main/flux1-depth-dev-lora.safetensors?download=true",
+        "directory": "loras/flux", "filename": ""
+    },
+    {
+        "url": "https://huggingface.co/black-forest-labs/FLUX.1-Canny-dev-lora/resolve/main/flux1-canny-dev-lora.safetensors?download=true",
+        "directory": "loras/flux", "filename": ""
     },
 ]
 FLUX_CLIP = [
