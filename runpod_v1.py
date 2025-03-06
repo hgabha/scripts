@@ -189,10 +189,6 @@ AURASR = [
 ]
 FLUX_DEV = [
     {
-        "url": "https://huggingface.co/black-forest-labs/FLUX.1-dev/resolve/main/ae.safetensors?download=true",
-        "directory": "vae", "filename": ""
-    },
-    {
         "url": "https://huggingface.co/black-forest-labs/FLUX.1-dev/resolve/main/flux1-dev.safetensors?download=true",
         "directory": "unet", "filename": ""
     }
@@ -201,6 +197,12 @@ FLUX_SCHNELL = [
     {
         "url": "https://huggingface.co/black-forest-labs/FLUX.1-schnell/resolve/main/flux1-schnell.safetensors?download=true",
         "directory": "unet", "filename": ""
+    },
+]
+FLUX_VAE = [
+    {
+        "url": "https://huggingface.co/black-forest-labs/FLUX.1-dev/resolve/main/ae.safetensors?download=true",
+        "directory": "vae", "filename": ""
     },
 ]
 FLUX_TOOLS = [
