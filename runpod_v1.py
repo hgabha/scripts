@@ -339,7 +339,7 @@ WAN21_KIJAI = [
         "directory": "vae", "filename": ""
     },
     {
-        "url": "https://huggingface.co/Kijai/WanVideo_comfy/resolve/main/open-clip-xlm-roberta-large-vit-huge-14_fp16.safetensors?download=true",
+        "url": "https://huggingface.co/Kijai/WanVideo_comfy/resolve/main/open-clip-xlm-roberta-large-vit-huge-14_visual_fp16.safetensors?download=true",
         "directory": "clip", "filename": ""
     },
     {
