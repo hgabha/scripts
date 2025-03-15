@@ -309,6 +309,28 @@ WAN21_MISC = [
         "directory": "clip_vision", "filename": ""
     },
 ]
+WAN21_REMADEAI_LORA = [
+    {
+        "url": "https://huggingface.co/Remade-AI/Squish/resolve/main/squish_18.safetensors?download=true",
+        "directory": "loras/remadeai", "filename": ""
+    },
+    {
+        "url": "https://huggingface.co/Remade-AI/Cakeify/resolve/main/cakeify_16_epochs.safetensors?download=true",
+        "directory": "loras/remadeai", "filename": ""
+    },
+    {
+        "url": "https://huggingface.co/Remade-AI/Deflate/resolve/main/deflate_20_epochs.safetensors?download=true",
+        "directory": "loras/remadeai", "filename": ""
+    },
+    {
+        "url": "https://huggingface.co/Remade-AI/Inflate/resolve/main/inflate_20_epochs.safetensors?download=true",
+        "directory": "loras/remadeai", "filename": ""
+    },
+    {
+        "url": "https://huggingface.co/Remade-AI/Rotate/resolve/main/rotate_20_epochs.safetensors?download=true",
+        "directory": "loras/remadeai", "filename": ""
+    },
+]
 WAN21_KIJAI = [
     {
         "url": "https://huggingface.co/Kijai/WanVideo_comfy/resolve/main/Wan2_1-I2V-14B-480P_fp8_e4m3fn.safetensors?download=true",
