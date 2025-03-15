@@ -285,6 +285,12 @@ WAN21_T2V = [
         "directory": "diffusion_models", "filename": ""
     },    
 ]
+WAN21_T2VFP8 = [
+    {
+        "url": "https://huggingface.co/Comfy-Org/Wan_2.1_ComfyUI_repackaged/resolve/main/split_files/diffusion_models/wan2.1_t2v_14B_fp8_e4m3fn.safetensors?download=true",
+        "directory": "diffusion_models", "filename": ""
+    },
+]
 WAN21_I2V = [
     {
         "url": "https://huggingface.co/Comfy-Org/Wan_2.1_ComfyUI_repackaged/resolve/main/split_files/diffusion_models/wan2.1_i2v_480p_14B_bf16.safetensors?download=true",
@@ -292,6 +298,16 @@ WAN21_I2V = [
     },
     {
         "url": "https://huggingface.co/Comfy-Org/Wan_2.1_ComfyUI_repackaged/resolve/main/split_files/diffusion_models/wan2.1_i2v_720p_14B_bf16.safetensors?download=true",
+        "directory": "diffusion_models", "filename": ""
+    },
+]
+WAN21_I2VFP8 = [
+    {
+        "url": "https://huggingface.co/Comfy-Org/Wan_2.1_ComfyUI_repackaged/resolve/main/split_files/diffusion_models/wan2.1_i2v_480p_14B_fp8_e4m3fn.safetensors?download=true",
+        "directory": "diffusion_models", "filename": ""
+    },
+    {
+        "url": "https://huggingface.co/Comfy-Org/Wan_2.1_ComfyUI_repackaged/resolve/main/split_files/diffusion_models/wan2.1_i2v_720p_14B_fp8_e4m3fn.safetensors?download=true",
         "directory": "diffusion_models", "filename": ""
     },
 ]
@@ -307,28 +323,6 @@ WAN21_MISC = [
     {
         "url": "https://huggingface.co/Comfy-Org/Wan_2.1_ComfyUI_repackaged/resolve/main/split_files/clip_vision/clip_vision_h.safetensors?download=true",
         "directory": "clip_vision", "filename": ""
-    },
-]
-WAN21_REMADEAI_LORA = [
-    {
-        "url": "https://huggingface.co/Remade-AI/Squish/resolve/main/squish_18.safetensors?download=true",
-        "directory": "loras/remadeai", "filename": ""
-    },
-    {
-        "url": "https://huggingface.co/Remade-AI/Cakeify/resolve/main/cakeify_16_epochs.safetensors?download=true",
-        "directory": "loras/remadeai", "filename": ""
-    },
-    {
-        "url": "https://huggingface.co/Remade-AI/Deflate/resolve/main/deflate_20_epochs.safetensors?download=true",
-        "directory": "loras/remadeai", "filename": ""
-    },
-    {
-        "url": "https://huggingface.co/Remade-AI/Inflate/resolve/main/inflate_20_epochs.safetensors?download=true",
-        "directory": "loras/remadeai", "filename": ""
-    },
-    {
-        "url": "https://huggingface.co/Remade-AI/Rotate/resolve/main/rotate_20_epochs.safetensors?download=true",
-        "directory": "loras/remadeai", "filename": ""
     },
 ]
 WAN21_KIJAI = [
