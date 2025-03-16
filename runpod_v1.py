@@ -111,7 +111,7 @@ def delete_files(urls_array, base_path):
 def create_alert(message):
   display(Javascript(f'alert("{message}");'))
     
-def refresh_runpod(COMFYUI_REQ,NODES_BASE_PATH):
+def refresh_pod(COMFYUI_REQ,NODES_BASE_PATH):
     # Script to find and install requirements.txt files from subfolders
   
     #%cd /{dest_folder}/ComfyUI
