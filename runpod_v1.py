@@ -111,6 +111,71 @@ def delete_files(urls_array, base_path):
 def create_alert(message):
   display(Javascript(f'alert("{message}");'))
     
+def refresh_runpod(COMFYUI_REQ,NODES_BASE_PATH):
+    # Script to find and install requirements.txt files from subfolders
+  
+    #%cd /{dest_folder}/ComfyUI
+    #COMFYUI_REQ = f"/{dest_folder}/ComfyUI/requirements.txt"
+    
+    print(f"Installing ComfyUI requirements...")
+    core_result = subprocess.run(
+                        ['pip', 'install', 'torch torchvision torchaudio --extra-index-url https://download.pytorch.org/whl/cu124'], 
+                        check=True,
+                        capture_output=True,
+                        text=True
+                    )
+    
+    #!pip install torch torchvision torchaudio --extra-index-url https://download.pytorch.org/whl/cu124
+    req_result = subprocess.run(
+                        ['pip', 'install', '-r', COMFYUI_REQ], 
+                        check=True,
+                        capture_output=True,
+                        text=True
+                    )
+    #!pip install -r /{dest_folder}/ComfyUI/requirements.txt
+    print(f"Finished Installing ComfyUI requirements...next we will refresh the nodes")
+    # Define the path to search in
+    #NODES_BASE_PATH = f"/{dest_folder}/ComfyUI/custom_nodes/"
+    
+    # Ensure the base path exists
+    if not os.path.exists(NODES_BASE_PATH):
+        print(f"Error: Path '{NODES_BASE_PATH}' does not exist.")
+    else:
+        # Initialize counters
+        found_count = 0
+        installed_count = 0
+        
+        print(f"Searching for requirements.txt files in subfolders of '{NODES_BASE_PATH}'...")
+        
+        # Get all immediate subfolders
+        subfolders = [f.path for f in os.scandir(NODES_BASE_PATH) if f.is_dir()]
+        
+        for subfolder in subfolders:
+            req_file_path = os.path.join(subfolder, 'requirements.txt')
+            
+            # Check if requirements.txt exists in the subfolder
+            if os.path.isfile(req_file_path):
+                found_count += 1
+                folder_name = os.path.basename(subfolder)
+                print(f"Found requirements.txt in '{folder_name}'")
+                
+                try:
+                    # Run pip install command
+                    print(f"Installing requirements from '{req_file_path}'...")
+                    result = subprocess.run(
+                        ['pip', 'install', '-r', req_file_path], 
+                        check=True,
+                        capture_output=True,
+                        text=True
+                    )
+                    installed_count += 1
+                    print(f"Successfully installed requirements for '{folder_name}'")
+                except subprocess.CalledProcessError as e:
+                    print(f"Error installing requirements for '{folder_name}': {e.stderr}")
+        
+        # Summary
+        print(f"\nSummary: Found {found_count} requirements.txt files, successfully installed {installed_count}")
+        
 # List of URLS
 SD_URLS = [
     {
