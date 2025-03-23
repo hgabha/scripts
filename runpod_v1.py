@@ -427,4 +427,8 @@ WAN21_KIJAI = [
         "url": "https://huggingface.co/Kijai/WanVideo_comfy/resolve/main/open-clip-xlm-roberta-large-vit-huge-14_visual_fp32.safetensors?download=true",
         "directory": "clip", "filename": ""
     },
+    {
+        "url": "https://huggingface.co/Comfy-Org/Wan_2.1_ComfyUI_repackaged/resolve/main/split_files/clip_vision/clip_vision_h.safetensors?download=true",
+        "directory": "clip_vision", "filename": ""
+    },
 ]
