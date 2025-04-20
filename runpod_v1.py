@@ -432,7 +432,7 @@ WAN21_KIJAI = [
         "directory": "clip_vision", "filename": ""
     },
 ]
-HIDREAM_FULL = [
+HIDREAM-I1_FULL = [
     {
         "url": "https://huggingface.co/Comfy-Org/HiDream-I1_ComfyUI/resolve/main/split_files/diffusion_models/hidream_i1_full_fp16.safetensors?download=true",
         "directory": "diffusion_models", "filename": ""
