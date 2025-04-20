@@ -438,7 +438,7 @@ HIDREAM_FULL = [
         "directory": "diffusion_models", "filename": ""
     },
     {
-        "url": "https://huggingface.co/Comfy-Org/HiDream-I1_ComfyUI/blob/main/split_files/vae/ae.safetensors?download=true",
+        "url": "https://huggingface.co/Comfy-Org/HiDream-I1_ComfyUI/resolve/main/split_files/vae/ae.safetensors?download=true",
         "directory": "vae", "filename": ""
     },
     {
