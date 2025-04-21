@@ -458,3 +458,81 @@ HIDREAM_I1_FULL = [
         "directory": "text_encoders", "filename": ""
     }
 ]
+HIDREAM_I1_FULLFP8 = [
+    {
+        "url": "https://huggingface.co/Comfy-Org/HiDream-I1_ComfyUI/resolve/main/split_files/diffusion_models/hidream_i1_full_fp8.safetensors?download=true",
+        "directory": "diffusion_models", "filename": ""
+    },
+    {
+        "url": "https://huggingface.co/Comfy-Org/HiDream-I1_ComfyUI/resolve/main/split_files/vae/ae.safetensors?download=true",
+        "directory": "vae", "filename": ""
+    },
+    {
+        "url": "https://huggingface.co/Comfy-Org/HiDream-I1_ComfyUI/resolve/main/split_files/text_encoders/clip_l_hidream.safetensors?download=true",
+        "directory": "text_encoders", "filename": ""
+    },
+    {
+        "url": "https://huggingface.co/Comfy-Org/HiDream-I1_ComfyUI/resolve/main/split_files/text_encoders/clip_g_hidream.safetensors?download=true",
+        "directory": "text_encoders", "filename": ""
+    },
+    {
+        "url": "https://huggingface.co/Comfy-Org/HiDream-I1_ComfyUI/resolve/main/split_files/text_encoders/t5xxl_fp8_e4m3fn_scaled.safetensors?download=true",
+        "directory": "text_encoders", "filename": ""
+    },
+    {
+        "url": "https://huggingface.co/Comfy-Org/HiDream-I1_ComfyUI/resolve/main/split_files/text_encoders/llama_3.1_8b_instruct_fp8_scaled.safetensors?download=true",
+        "directory": "text_encoders", "filename": ""
+    }
+]
+HIDREAM_I1_FASTFP8 = [
+    {
+        "url": "https://huggingface.co/Comfy-Org/HiDream-I1_ComfyUI/resolve/main/split_files/diffusion_models/hidream_i1_fast_fp8.safetensors?download=true",
+        "directory": "diffusion_models", "filename": ""
+    },
+    {
+        "url": "https://huggingface.co/Comfy-Org/HiDream-I1_ComfyUI/resolve/main/split_files/vae/ae.safetensors?download=true",
+        "directory": "vae", "filename": ""
+    },
+    {
+        "url": "https://huggingface.co/Comfy-Org/HiDream-I1_ComfyUI/resolve/main/split_files/text_encoders/clip_l_hidream.safetensors?download=true",
+        "directory": "text_encoders", "filename": ""
+    },
+    {
+        "url": "https://huggingface.co/Comfy-Org/HiDream-I1_ComfyUI/resolve/main/split_files/text_encoders/clip_g_hidream.safetensors?download=true",
+        "directory": "text_encoders", "filename": ""
+    },
+    {
+        "url": "https://huggingface.co/Comfy-Org/HiDream-I1_ComfyUI/resolve/main/split_files/text_encoders/t5xxl_fp8_e4m3fn_scaled.safetensors?download=true",
+        "directory": "text_encoders", "filename": ""
+    },
+    {
+        "url": "https://huggingface.co/Comfy-Org/HiDream-I1_ComfyUI/resolve/main/split_files/text_encoders/llama_3.1_8b_instruct_fp8_scaled.safetensors?download=true",
+        "directory": "text_encoders", "filename": ""
+    }
+]
+HIDREAM_I1_DEVFP8 = [
+    {
+        "url": "https://huggingface.co/Comfy-Org/HiDream-I1_ComfyUI/resolve/main/split_files/diffusion_models/hidream_i1_dev_fp8.safetensors?download=true",
+        "directory": "diffusion_models", "filename": ""
+    },
+    {
+        "url": "https://huggingface.co/Comfy-Org/HiDream-I1_ComfyUI/resolve/main/split_files/vae/ae.safetensors?download=true",
+        "directory": "vae", "filename": ""
+    },
+    {
+        "url": "https://huggingface.co/Comfy-Org/HiDream-I1_ComfyUI/resolve/main/split_files/text_encoders/clip_l_hidream.safetensors?download=true",
+        "directory": "text_encoders", "filename": ""
+    },
+    {
+        "url": "https://huggingface.co/Comfy-Org/HiDream-I1_ComfyUI/resolve/main/split_files/text_encoders/clip_g_hidream.safetensors?download=true",
+        "directory": "text_encoders", "filename": ""
+    },
+    {
+        "url": "https://huggingface.co/Comfy-Org/HiDream-I1_ComfyUI/resolve/main/split_files/text_encoders/t5xxl_fp8_e4m3fn_scaled.safetensors?download=true",
+        "directory": "text_encoders", "filename": ""
+    },
+    {
+        "url": "https://huggingface.co/Comfy-Org/HiDream-I1_ComfyUI/resolve/main/split_files/text_encoders/llama_3.1_8b_instruct_fp8_scaled.safetensors?download=true",
+        "directory": "text_encoders", "filename": ""
+    }
+]
