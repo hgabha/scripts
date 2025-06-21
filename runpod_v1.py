@@ -255,13 +255,13 @@ AURASR = [
 FLUX_DEV = [
     {
         "url": "https://huggingface.co/black-forest-labs/FLUX.1-dev/resolve/main/flux1-dev.safetensors?download=true",
-        "directory": "unet", "filename": ""
+        "directory": "checkpoints", "filename": ""
     }
 ]
 FLUX_SCHNELL = [
     {
         "url": "https://huggingface.co/black-forest-labs/FLUX.1-schnell/resolve/main/flux1-schnell.safetensors?download=true",
-        "directory": "unet", "filename": ""
+        "directory": "checkpoints", "filename": ""
     },
 ]
 FLUX_VAE = [
@@ -273,7 +273,7 @@ FLUX_VAE = [
 FLUX_TOOLS = [
     {
         "url": "https://huggingface.co/black-forest-labs/FLUX.1-Fill-dev/resolve/main/flux1-fill-dev.safetensors?download=true",
-        "directory": "unet", "filename": ""
+        "directory": "checkpoints", "filename": ""
     },
     {
         "url": "https://huggingface.co/black-forest-labs/FLUX.1-Redux-dev/resolve/main/flux1-redux-dev.safetensors?download=true",
@@ -306,6 +306,20 @@ FLUX_CLIP = [
     {
         "url": "https://huggingface.co/comfyanonymous/flux_text_encoders/resolve/main/t5xxl_fp8_e4m3fn.safetensors?download=true",
         "directory": "clip", "filename": ""
+    }
+]
+CHROMA = [
+    {
+        "url":"https://huggingface.co/lodestones/Chroma/resolve/main/chroma-unlocked-v38-detail-calibrated.safetensors?download=true",
+        "directory":"checkpoints","filename": ""
+    },
+    {
+        "url": "https://huggingface.co/comfyanonymous/flux_text_encoders/resolve/main/t5xxl_fp16.safetensors?download=true",
+        "directory": "clip", "filename": ""
+    },
+    {
+        "url": "https://huggingface.co/black-forest-labs/FLUX.1-dev/resolve/main/ae.safetensors?download=true",
+        "directory": "vae", "filename": ""
     }
 ]
 FLUX_LORA = [
