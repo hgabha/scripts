@@ -310,12 +310,16 @@ FLUX_CLIP = [
 ]
 CHROMA = [
     {
-        "url":"https://huggingface.co/lodestones/Chroma/resolve/main/chroma-unlocked-v38-detail-calibrated.safetensors?download=true",
+        "url":"https://huggingface.co/lodestones/Chroma/resolve/main/chroma-unlocked-v43-detail-calibrated.safetensors?download=true",
         "directory":"diffusion_models","filename": ""
     },
     {
         "url": "https://huggingface.co/comfyanonymous/flux_text_encoders/resolve/main/t5xxl_fp16.safetensors?download=true",
         "directory": "clip", "filename": ""
+    },
+    {
+        "url": "https://huggingface.co/lodestones/Chroma/resolve/main/ae.safetensors?download=true",
+        "directory": "vae", "filename": ""
     },
 ]
 FLUX_LORA = [
