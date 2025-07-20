@@ -3,6 +3,137 @@ from urllib.parse import urlparse
 import os # Add this line to import the os module
 from IPython.display import display, Javascript
 
+import json
+import struct
+from pathlib import Path
+from typing import Optional, Dict, Any
+
+#declaration of all the libraries above here
+
+def extract_comfyui_workflows(directory_path: str) -> str:
+    """
+    Extract ComfyUI workflow data from all PNG files in a directory and subdirectories.
+    
+    Args:
+        directory_path (str): Path to directory to search for PNG files
+        
+    Returns:
+        str: Summary message with extraction results
+    """
+    try:
+        directory = Path(directory_path)
+        
+        if not directory.exists():
+            return f"Directory not found: {directory}"
+        
+        if not directory.is_dir():
+            return f"Path is not a directory: {directory}"
+        
+        # Find all PNG files recursively
+        png_files = list(directory.rglob("*.png"))
+        
+        if not png_files:
+            return f"No PNG files found in {directory} and its subdirectories"
+        
+        success_count = 0
+        total_files = len(png_files)
+        
+        for png_file in png_files:
+            try:
+                # Read the PNG file
+                with open(png_file, 'rb') as f:
+                    png_data = f.read()
+                
+                # Extract workflow metadata
+                workflow_data = _extract_png_metadata(png_data)
+                
+                if workflow_data:
+                    # Save workflow data in the same directory as the PNG
+                    base_name = png_file.stem
+                    workflow_path = png_file.parent / f"{base_name}_workflow.json"
+                    
+                    with open(workflow_path, 'w', encoding='utf-8') as f:
+                        json.dump(workflow_data, f, indent=2, ensure_ascii=False)
+                    
+                    success_count += 1
+                    
+            except Exception as e:
+                # Continue processing other files even if one fails
+                print(f"Warning: Failed to process {png_file.name}: {str(e)}")
+                continue
+        
+        return f"Successfully extracted {success_count} workflow JSON files from {total_files} PNG files"
+        
+    except Exception as e:
+        return f"Error processing directory: {str(e)}"
+
+
+def _extract_png_metadata(png_data: bytes) -> Optional[Dict[Any, Any]]:
+    """
+    Extract workflow metadata from PNG file data.
+    
+    Args:
+        png_data (bytes): Raw PNG file data
+        
+    Returns:
+        Optional[Dict]: workflow_data if found, None otherwise
+    """
+    workflow_data = None
+    
+    # Check PNG signature
+    if len(png_data) < 8 or png_data[:8] != b'\x89PNG\r\n\x1a\n':
+        raise ValueError("Not a valid PNG file")
+    
+    offset = 8  # Skip PNG signature
+    
+    while offset < len(png_data):
+        # Need at least 8 bytes for chunk header
+        if offset + 8 > len(png_data):
+            break
+            
+        # Read chunk length (4 bytes, big-endian)
+        length = struct.unpack('>I', png_data[offset:offset+4])[0]
+        
+        # Read chunk type (4 bytes)
+        chunk_type = png_data[offset+4:offset+8].decode('ascii', errors='ignore')
+        
+        # Check for text chunks that might contain ComfyUI data
+        if chunk_type in ['tEXt', 'iTXt']:
+            # Extract chunk data
+            chunk_data = png_data[offset+8:offset+8+length]
+            
+            try:
+                # Decode as UTF-8 text
+                text = chunk_data.decode('utf-8', errors='ignore')
+                
+                # Look for workflow data
+                if 'workflow' in text:
+                    null_index = text.find('\x00')
+                    if null_index != -1:
+                        key = text[:null_index]
+                        value = text[null_index+1:]
+                        
+                        if key == 'workflow':
+                            try:
+                                workflow_data = json.loads(value)
+                                break  # Found workflow, no need to continue
+                            except json.JSONDecodeError:
+                                pass  # Continue searching other chunks
+                                
+            except UnicodeDecodeError:
+                # Skip chunks that can't be decoded as text
+                pass
+        
+        # Move to next chunk (8 bytes header + length + 4 bytes CRC)
+        offset += 8 + length + 4
+        
+        # Break on IEND chunk
+        if chunk_type == 'IEND':
+            break
+    
+    return workflow_data
+
+
 def get_filename_from_url(url):
     """Extract filename from URL, removing query parameters"""
     # Parse the URL and get the path
