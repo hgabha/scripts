@@ -395,6 +395,18 @@ FLUX_SCHNELL = [
         "directory": "diffusion_models", "filename": ""
     },
 ]
+FLUX_KONTEXT = [
+    {
+        "url": "https://huggingface.co/black-forest-labs/FLUX.1-Kontext-dev/resolve/main/flux1-kontext-dev.safetensors?download=true",
+        "directory": "diffusion_models", "filename": ""
+    },
+]
+FLUX_KONTEXT_FP8 = [
+    {
+        "url": "https://huggingface.co/Comfy-Org/flux1-kontext-dev_ComfyUI/resolve/main/split_files/diffusion_models/flux1-dev-kontext_fp8_scaled.safetensors?download=true",
+        "directory": "diffusion_models", "filename": ""
+    },
+]
 FLUX_VAE = [
     {
         "url": "https://huggingface.co/black-forest-labs/FLUX.1-dev/resolve/main/ae.safetensors?download=true",
