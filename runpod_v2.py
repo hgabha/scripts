@@ -346,7 +346,7 @@ MODEL_CONFIGS = {
         ]
     },
     "FLUX Dev": {
-        "hf": False,
+        "hf": True,
         "files": [
             {
                 "url": "https://huggingface.co/black-forest-labs/FLUX.1-dev/resolve/main/flux1-dev.safetensors?download=true",
@@ -356,7 +356,7 @@ MODEL_CONFIGS = {
         ]
     },
     "FLUX Schnell": {
-        "hf": False,
+        "hf": True,
         "files": [
             {
                 "url": "https://huggingface.co/black-forest-labs/FLUX.1-schnell/resolve/main/flux1-schnell.safetensors?download=true",
@@ -366,7 +366,7 @@ MODEL_CONFIGS = {
         ]
     },
     "FLUX Kontext": {
-        "hf": False,
+        "hf": True,
         "files": [
             {
                 "url": "https://huggingface.co/black-forest-labs/FLUX.1-Kontext-dev/resolve/main/flux1-kontext-dev.safetensors?download=true",
@@ -386,7 +386,7 @@ MODEL_CONFIGS = {
         ]
     },
     "FLUX VAE": {
-        "hf": False,
+        "hf": True,
         "files": [
             {
                 "url": "https://huggingface.co/black-forest-labs/FLUX.1-dev/resolve/main/ae.safetensors?download=true",
@@ -396,7 +396,7 @@ MODEL_CONFIGS = {
         ]
     },
     "FLUX Tools": {
-        "hf": False,
+        "hf": True,
         "files": [
             {
                 "url": "https://huggingface.co/black-forest-labs/FLUX.1-Fill-dev/resolve/main/flux1-fill-dev.safetensors?download=true",
