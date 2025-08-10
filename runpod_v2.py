@@ -989,6 +989,14 @@ class ModelDownloaderInterface:
             self.progress_bar.value = 0
             self.progress_label.value = f"<b>Processing:</b> {filename}"
     
+    def _reset_ui_state(self):
+        """Reset UI to initial state"""
+        self._show_progress(False)
+        self._set_buttons_disabled(False)
+        self.progress_bar.value = 0
+        self.progress_label.value = ""
+        self.is_downloading = False
+    
     def _set_buttons_disabled(self, disabled=True):
         """Enable or disable all action buttons"""
         self.download_btn.disabled = disabled
@@ -1003,9 +1011,12 @@ class ModelDownloaderInterface:
             self.download_btn.icon = 'download'
     
     def _on_download(self, button):
+        # Early return with debug info if already downloading
         if self.is_downloading:
+            print("⚠️  Download already in progress, ignoring click")
             return
             
+        # Set downloading state immediately
         self.is_downloading = True
         selected_model = self.model_dropdown.value
         selected_config = MODEL_CONFIGS[selected_model]
@@ -1033,6 +1044,11 @@ class ModelDownloaderInterface:
             total_files = len(files_list)
             
             for idx, file_config in enumerate(files_list, 1):
+                # Check if user somehow triggered another download
+                if not self.is_downloading:
+                    print("⚠️  Download was cancelled")
+                    break
+                    
                 filename = file_config['filename'] if file_config['filename'] else get_filename_from_url(file_config['url'])
                 self._update_progress(idx, total_files, filename)
                 
@@ -1044,11 +1060,12 @@ class ModelDownloaderInterface:
             
         except Exception as e:
             print(f"❌ Error during download: {str(e)}")
+            # Re-raise to ensure finally block runs
+            raise
         finally:
-            # Hide progress bar and re-enable buttons
-            self._show_progress(False)
-            self._set_buttons_disabled(False)
-            self.is_downloading = False
+            # Always reset UI state, regardless of success/failure
+            print("🔄 Resetting UI state...")
+            self._reset_ui_state()
     
     def _download_single_file(self, file_config, hf_token):
         """Download a single file with progress tracking"""
@@ -1077,29 +1094,21 @@ class ModelDownloaderInterface:
         print(f"Downloading: {filename}")
 
         try:
-            if hf_token == '':
-                # Use wget with simplified progress output
-                subprocess.run([
-                    "wget",
-                    "-O", full_path,    # Output file
-                    url,                # URL to download
-                    "--quiet",          # Suppress wget's output
-                    "--show-progress",  # Show progress bar
-                    "--progress=bar:force:noscroll"  # Simple progress bar format
-                ], check=True)
-                print(f"Successfully downloaded: {filename}")
-            else:
-                # Use wget with simplified progress output
-                subprocess.run([
-                    "wget",
-                    "--header", f"Authorization: Bearer {hf_token}",
-                    "-O", full_path,    # Output file
-                    url,                # URL to download
-                    "--quiet",          # Suppress wget's output
-                    "--show-progress",  # Show progress bar
-                    "--progress=bar:force:noscroll"  # Simple progress bar format
-                ], check=True)
-                print(f"Successfully downloaded: {filename}")
+            cmd = [
+                "wget",
+                "-O", full_path,
+                url,
+                "--quiet",
+                "--show-progress",
+                "--progress=bar:force:noscroll"
+            ]
+            
+            if hf_token:
+                cmd.insert(1, "--header")
+                cmd.insert(2, f"Authorization: Bearer {hf_token}")
+            
+            subprocess.run(cmd, check=True)
+            print(f"Successfully downloaded: {filename}")
 
         except subprocess.CalledProcessError as e:
             print(f"Error downloading {url}: {e}")
@@ -1109,6 +1118,10 @@ class ModelDownloaderInterface:
             raise
     
     def _on_delete(self, button):
+        if self.is_downloading:
+            print("⚠️  Cannot delete while download is in progress")
+            return
+            
         selected_model = self.model_dropdown.value
         selected_config = MODEL_CONFIGS[selected_model]
         
@@ -1178,3 +1191,4 @@ def create_model_downloader_interface(base_path="/content", hf_token=""):
     interface = ModelDownloaderInterface(base_path, hf_token)
     interface.display()
     return interface
+
