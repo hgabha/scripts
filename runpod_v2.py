@@ -307,7 +307,6 @@ class ModelDownloaderInterface:
     def __init__(self, base_path="/content", hf_token=""):
         self.base_path = base_path
         self.hf_token = hf_token
-        self.output_area = widgets.Output()
         
         # Create widgets
         self.model_dropdown = widgets.Dropdown(
@@ -315,21 +314,6 @@ class ModelDownloaderInterface:
             description='Model Set:',
             style={'description_width': 'initial'},
             layout=widgets.Layout(width='300px')
-        )
-        
-        self.base_path_input = widgets.Text(
-            value=base_path,
-            description='Base Path:',
-            style={'description_width': 'initial'},
-            layout=widgets.Layout(width='400px')
-        )
-        
-        self.hf_token_input = widgets.Text(
-            value=hf_token,
-            description='HF Token:',
-            placeholder='Optional: Hugging Face token',
-            style={'description_width': 'initial'},
-            layout=widgets.Layout(width='400px')
         )
         
         self.download_btn = widgets.Button(
@@ -359,69 +343,53 @@ class ModelDownloaderInterface:
         self.info_btn.on_click(self._on_show_info)
         
     def _on_download(self, button):
-        with self.output_area:
-            clear_output()
-            selected_model = self.model_dropdown.value
-            base_path = self.base_path_input.value
-            hf_token = self.hf_token_input.value
-            
-            print(f"🚀 Starting download for: {selected_model}")
-            print(f"📁 Base path: {base_path}")
+        selected_model = self.model_dropdown.value
+        
+        print(f"🚀 Starting download for: {selected_model}")
+        print(f"📁 Base path: {self.base_path}")
+        print("=" * 50)
+        
+        try:
+            selected_config = MODEL_CONFIGS[selected_model]
+            download_files(selected_config, self.base_path, self.hf_token)
             print("=" * 50)
-            
-            try:
-                selected_config = MODEL_CONFIGS[selected_model]
-                download_files(selected_config, base_path, hf_token)
-                print("=" * 50)
-                print("✅ Download process completed!")
-            except Exception as e:
-                print(f"❌ Error during download: {str(e)}")
+            print("✅ Download process completed!")
+        except Exception as e:
+            print(f"❌ Error during download: {str(e)}")
     
     def _on_delete(self, button):
-        with self.output_area:
-            clear_output()
-            selected_model = self.model_dropdown.value
-            base_path = self.base_path_input.value
-            
-            print(f"🗑️ Starting deletion for: {selected_model}")
-            print(f"📁 Base path: {base_path}")
+        selected_model = self.model_dropdown.value
+        
+        print(f"🗑️ Starting deletion for: {selected_model}")
+        print(f"📁 Base path: {self.base_path}")
+        print("=" * 50)
+        
+        try:
+            selected_config = MODEL_CONFIGS[selected_model]
+            delete_files(selected_config, self.base_path)
             print("=" * 50)
-            
-            try:
-                selected_config = MODEL_CONFIGS[selected_model]
-                delete_files(selected_config, base_path)
-                print("=" * 50)
-                print("✅ Deletion process completed!")
-            except Exception as e:
-                print(f"❌ Error during deletion: {str(e)}")
+            print("✅ Deletion process completed!")
+        except Exception as e:
+            print(f"❌ Error during deletion: {str(e)}")
     
     def _on_show_info(self, button):
-        with self.output_area:
-            clear_output()
-            selected_model = self.model_dropdown.value
-            selected_config = MODEL_CONFIGS[selected_model]
-            
-            print(f"📋 Details for: {selected_model}")
-            print("=" * 50)
-            print(f"Number of files: {len(selected_config)}")
+        selected_model = self.model_dropdown.value
+        selected_config = MODEL_CONFIGS[selected_model]
+        
+        print(f"📋 Details for: {selected_model}")
+        print("=" * 50)
+        print(f"Number of files: {len(selected_config)}")
+        print()
+        
+        for i, item in enumerate(selected_config, 1):
+            filename = item['filename'] if item['filename'] else get_filename_from_url(item['url'])
+            print(f"{i}. File: {filename}")
+            print(f"   Directory: {item['directory']}")
+            print(f"   URL: {item['url'][:60]}{'...' if len(item['url']) > 60 else ''}")
             print()
-            
-            for i, item in enumerate(selected_config, 1):
-                filename = item['filename'] if item['filename'] else get_filename_from_url(item['url'])
-                print(f"{i}. File: {filename}")
-                print(f"   Directory: {item['directory']}")
-                print(f"   URL: {item['url'][:60]}{'...' if len(item['url']) > 60 else ''}")
-                print()
     
     def display(self):
         """Display the interface"""
-        # Settings section
-        settings_box = widgets.VBox([
-            widgets.HTML("<h3>🔧 Settings</h3>"),
-            self.base_path_input,
-            self.hf_token_input
-        ])
-        
         # Model selection section
         selection_box = widgets.VBox([
             widgets.HTML("<h3>📦 Model Selection</h3>"),
@@ -438,12 +406,9 @@ class ModelDownloaderInterface:
         # Main interface
         main_interface = widgets.VBox([
             widgets.HTML("<h2>🤖 ComfyUI Model Downloader</h2>"),
-            settings_box,
             selection_box,
             widgets.HTML("<h3>⚡ Actions</h3>"),
-            buttons_box,
-            widgets.HTML("<h3>📄 Output</h3>"),
-            self.output_area
+            buttons_box
         ])
         
         display(main_interface)
