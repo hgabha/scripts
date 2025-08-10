@@ -242,7 +242,7 @@ def refresh_pod(COMFYUI_REQ, NODES_BASE_PATH):
 # Model configurations
 MODEL_CONFIGS = {
     "Stable Diffusion 1.5": {
-        "hf": True,
+        "hf": False,
         "files": [
             {
                 "url": "https://huggingface.co/stable-diffusion-v1-5/stable-diffusion-v1-5/resolve/main/v1-5-pruned.safetensors?download=true",
@@ -257,7 +257,7 @@ MODEL_CONFIGS = {
         ]
     },
     "Juggernaut 1.5": {
-        "hf": True,
+        "hf": False,
         "files": [
             {
                 "url": "https://huggingface.co/KamCastle/jugg/resolve/main/juggernaut_reborn.safetensors",
@@ -267,7 +267,7 @@ MODEL_CONFIGS = {
         ]
     },
     "Stable Diffusion XL": {
-        "hf": True,
+        "hf": False,
         "files": [
             {
                 "url": "https://huggingface.co/stabilityai/stable-diffusion-xl-base-1.0/resolve/main/sd_xl_base_1.0.safetensors?download=true",
@@ -287,7 +287,7 @@ MODEL_CONFIGS = {
         ]
     },
     "Juggernaut SDXL": {
-        "hf": True,
+        "hf": False,
         "files": [
             {
                 "url": "https://huggingface.co/RunDiffusion/Juggernaut-XL-Lightning/resolve/main/Juggernaut_RunDiffusionPhoto2_Lightning_4Steps.safetensors",
@@ -302,7 +302,7 @@ MODEL_CONFIGS = {
         ]
     },
     "SUPIR Models": {
-        "hf": True,
+        "hf": False,
         "files": [
             {
                 "url": "https://huggingface.co/camenduru/SUPIR/resolve/main/SUPIR-v0F.ckpt?download=true",
