@@ -465,6 +465,34 @@ CHROMA = [
         "directory": "vae", "filename": ""
     },
 ]
+QWEN = [
+    {
+        "url":"https://huggingface.co/Comfy-Org/Qwen-Image_ComfyUI/resolve/main/split_files/diffusion_models/qwen_image_bf16.safetensors?download=true",
+        "directory":"diffusion_models","filename": ""
+    },
+    {
+        "url": "https://huggingface.co/Comfy-Org/Qwen-Image_ComfyUI/resolve/main/split_files/text_encoders/qwen_2.5_vl_7b.safetensors?download=true",
+        "directory": "clip", "filename": ""
+    },
+    {
+        "url": "https://huggingface.co/Comfy-Org/Qwen-Image_ComfyUI/resolve/main/split_files/vae/qwen_image_vae.safetensors?download=true",
+        "directory": "vae", "filename": ""
+    },
+]
+QWEN_FP8 = [
+    {
+        "url":"https://huggingface.co/Comfy-Org/Qwen-Image_ComfyUI/resolve/main/split_files/diffusion_models/qwen_image_fp8_e4m3fn.safetensors?download=true",
+        "directory":"diffusion_models","filename": ""
+    },
+    {
+        "url": "https://huggingface.co/Comfy-Org/Qwen-Image_ComfyUI/resolve/main/split_files/text_encoders/qwen_2.5_vl_7b_fp8_scaled.safetensors?download=true",
+        "directory": "clip", "filename": ""
+    },
+    {
+        "url": "https://huggingface.co/Comfy-Org/Qwen-Image_ComfyUI/resolve/main/split_files/vae/qwen_image_vae.safetensors?download=true",
+        "directory": "vae", "filename": ""
+    },
+]
 FLUX_LORA = [
     {
         "url": "https://huggingface.co/comfyanonymous/flux_RealismLora_converted_comfyui/resolve/main/flux_realism_lora.safetensors?download=true",
