@@ -98,7 +98,91 @@ def _extract_png_metadata(png_data: bytes) -> Optional[Dict[Any, Any]]:
             break
     
     return workflow_data
+def get_filename_from_url(url):
+    """Extract filename from URL, removing query parameters"""
+    path = urlparse(url).path
+    filename = os.path.basename(path)
+    return filename
 
+def download_files(urls_array, base_path, hf_token):
+    """Download files from URLs array using wget if they don't already exist"""
+    num_urls = len(urls_array)
+    print(f"Found {num_urls} URLs to download")
+
+    for idx, entry in enumerate(urls_array, 1):
+        url = entry["url"]
+        directory = os.path.join(base_path, entry["directory"].lstrip('/'))
+        provided_filename = entry["filename"]
+
+        os.makedirs(directory, exist_ok=True)
+
+        if provided_filename:
+            filename = provided_filename
+        else:
+            filename = get_filename_from_url(url)
+
+        full_path = os.path.join(directory, filename)
+
+        if os.path.exists(full_path):
+            print(f"File already exists: {full_path}")
+            print("Skipping download...")
+            continue
+
+        print(f"Downloading: {filename}")
+
+        try:
+            if hf_token == '':
+                subprocess.run([
+                    "wget",
+                    "-O", full_path,
+                    url,
+                    "--quiet",
+                    "--show-progress",
+                    "--progress=bar:force:noscroll"
+                ], check=True)
+                print(f"Successfully downloaded: {filename}")
+            else:
+                subprocess.run([
+                    "wget",
+                    "--header", f"Authorization: Bearer {hf_token}",
+                    "-O", full_path,
+                    url,
+                    "--quiet",
+                    "--show-progress",
+                    "--progress=bar:force:noscroll"
+                ], check=True)
+                print(f"Successfully downloaded: {filename}")
+
+        except subprocess.CalledProcessError as e:
+            print(f"Error downloading {url}: {e}")
+        except Exception as e:
+            print(f"Unexpected error with {url}: {e}")
+
+def delete_files(urls_array, base_path):
+    """Delete files from URLs array"""
+    num_urls = len(urls_array)
+
+    for idx, entry in enumerate(urls_array, 1):
+        url = entry["url"]
+        directory = os.path.join(base_path, entry["directory"])
+        provided_filename = entry["filename"]
+
+        if provided_filename:
+            filename = provided_filename
+        else:
+            filename = get_filename_from_url(url)
+
+        full_path = os.path.join(directory, filename)
+
+        print(f"\nAttempting to delete file {idx} of {num_urls}")
+
+        if os.path.exists(full_path):
+            print(f"Found file {full_path}...deleted!")
+            os.remove(full_path)
+        else:
+            print(f"Skipping file {full_path}...not found!")
+            continue
+            
 def create_alert(message):
     display(Javascript(f'alert("{message}");'))
     
