@@ -987,6 +987,10 @@ class ModelDownloaderInterface:
             self._reset_ui_state()
     
     def _download_single_file(self, file_config, hf_token):
+        # Clear previous output
+        clear_output(wait=True)
+        # Redisplay the interface to ensure it persists
+        self.display()
         """Download a single file with progress tracking"""
         url = file_config["url"]
         directory = os.path.join(self.base_path, file_config["directory"].lstrip('/'))
@@ -1037,6 +1041,10 @@ class ModelDownloaderInterface:
             raise
     
     def _on_delete(self, button):
+        # Clear previous output
+        clear_output(wait=True)
+        # Redisplay the interface to ensure it persists
+        self.display()
         if self.is_downloading:
             print("⚠️  Cannot delete while download is in progress")
             return
