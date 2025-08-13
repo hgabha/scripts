@@ -1011,6 +1011,10 @@ class ModelDownloaderInterface:
             self.download_btn.icon = 'download'
     
     def _on_download(self, button):
+        # Clear previous output
+        clear_output(wait=True)
+        # Redisplay the interface to ensure it persists
+        self.display()
         # Early return with debug info if already downloading
         if self.is_downloading:
             print("⚠️  Download already in progress, ignoring click")
