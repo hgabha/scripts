@@ -1,4 +1,4 @@
-MODEL_CONFIGS = {
+{
     "Stable Diffusion 1.5": {
         "hf": False,
         "files": [
