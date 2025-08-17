@@ -209,11 +209,11 @@
             }
         ]
     },
-    "Chroma": {
+    "Chroma v50 by lodestones": {
         "hf": false,
         "files": [
             {
-                "url": "https://huggingface.co/lodestones/Chroma/resolve/main/chroma-unlocked-v43-detail-calibrated.safetensors?download=true",
+                "url": "https://huggingface.co/lodestones/Chroma/resolve/main/chroma-unlocked-v50.safetensors?download=true",
                 "directory": "diffusion_models",
                 "filename": ""
             },
@@ -229,7 +229,7 @@
             }
         ]
     },
-    "Qwen Image": {
+    "Qwen Image Full BF16": {
         "hf": false,
         "files": [
             {
