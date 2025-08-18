@@ -111,6 +111,21 @@
                 "url": "https://huggingface.co/black-forest-labs/FLUX.1-dev/resolve/main/flux1-dev.safetensors?download=true",
                 "directory": "diffusion_models",
                 "filename": ""
+            },
+            {
+                "url": "https://huggingface.co/black-forest-labs/FLUX.1-dev/resolve/main/ae.safetensors?download=true",
+                "directory": "vae",
+                "filename": ""
+            },
+            {
+                "url": "https://huggingface.co/comfyanonymous/flux_text_encoders/resolve/main/t5xxl_fp16.safetensors?download=true",
+                "directory": "clip",
+                "filename": ""
+            },
+            {
+                "url": "https://huggingface.co/comfyanonymous/flux_text_encoders/resolve/main/clip_l.safetensors?download=true",
+                "directory": "clip",
+                "filename": ""
             }
         ]
     },
@@ -121,40 +136,85 @@
                 "url": "https://huggingface.co/black-forest-labs/FLUX.1-schnell/resolve/main/flux1-schnell.safetensors?download=true",
                 "directory": "diffusion_models",
                 "filename": ""
+            },
+            {
+                "url": "https://huggingface.co/black-forest-labs/FLUX.1-dev/resolve/main/ae.safetensors?download=true",
+                "directory": "vae",
+                "filename": ""
+            },
+            {
+                "url": "https://huggingface.co/comfyanonymous/flux_text_encoders/resolve/main/t5xxl_fp16.safetensors?download=true",
+                "directory": "clip",
+                "filename": ""
+            },
+            {
+                "url": "https://huggingface.co/comfyanonymous/flux_text_encoders/resolve/main/clip_l.safetensors?download=true",
+                "directory": "clip",
+                "filename": ""
             }
         ]
     },
-    "FLUX Kontext": {
+    "FLUX Kontext Full": {
         "hf": true,
         "files": [
             {
                 "url": "https://huggingface.co/black-forest-labs/FLUX.1-Kontext-dev/resolve/main/flux1-kontext-dev.safetensors?download=true",
                 "directory": "diffusion_models",
                 "filename": ""
+            },
+            {
+                "url": "https://huggingface.co/black-forest-labs/FLUX.1-dev/resolve/main/ae.safetensors?download=true",
+                "directory": "vae",
+                "filename": ""
+            },
+            {
+                "url": "https://huggingface.co/comfyanonymous/flux_text_encoders/resolve/main/t5xxl_fp16.safetensors?download=true",
+                "directory": "clip",
+                "filename": ""
+            },
+            {
+                "url": "https://huggingface.co/comfyanonymous/flux_text_encoders/resolve/main/clip_l.safetensors?download=true",
+                "directory": "clip",
+                "filename": ""
             }
         ]
     },
     "FLUX Kontext FP8": {
-        "hf": false,
+        "hf": true,
         "files": [
             {
                 "url": "https://huggingface.co/Comfy-Org/flux1-kontext-dev_ComfyUI/resolve/main/split_files/diffusion_models/flux1-dev-kontext_fp8_scaled.safetensors?download=true",
                 "directory": "diffusion_models",
                 "filename": ""
-            }
-        ]
-    },
-    "FLUX VAE": {
-        "hf": true,
-        "files": [
+            },
             {
                 "url": "https://huggingface.co/black-forest-labs/FLUX.1-dev/resolve/main/ae.safetensors?download=true",
                 "directory": "vae",
                 "filename": ""
+            },
+            {
+                "url": "https://huggingface.co/comfyanonymous/flux_text_encoders/resolve/main/clip_l.safetensors?download=true",
+                "directory": "clip",
+                "filename": ""
+            },
+            {
+                "url": "https://huggingface.co/comfyanonymous/flux_text_encoders/resolve/main/t5xxl_fp8_e4m3fn.safetensors?download=true",
+                "directory": "clip",
+                "filename": ""
             }
         ]
     },
-    "FLUX Tools": {
+    "FLUX Dev FP8": {
+        "hf": false,
+        "files": [
+            {
+                "url": "https://huggingface.co/Comfy-Org/flux1-dev/resolve/main/flux1-dev-fp8.safetensors?download=true",
+                "directory": "checkpoints",
+                "filename": ""
+            }
+        ]
+    },
+    "FLUX Dev Tools - Fill and Redux": {
         "hf": true,
         "files": [
             {
@@ -189,14 +249,9 @@
             }
         ]
     },
-    "FLUX CLIP": {
+    "FLUX DEV CLIP FP8": {
         "hf": false,
         "files": [
-            {
-                "url": "https://huggingface.co/comfyanonymous/flux_text_encoders/resolve/main/t5xxl_fp16.safetensors?download=true",
-                "directory": "clip",
-                "filename": ""
-            },
             {
                 "url": "https://huggingface.co/comfyanonymous/flux_text_encoders/resolve/main/clip_l.safetensors?download=true",
                 "directory": "clip",
@@ -279,7 +334,7 @@
             }
         ]
     },
-    "FLUX ControlNet Union Pro": {
+    "FLUX ControlNet Union Pro 1.0": {
         "hf": false,
         "files": [
             {
@@ -369,7 +424,7 @@
             }
         ]
     },
-    "Wan 2.1 I2V FP8": {
+    "Wan 2.1 I2V 480p FP8": {
         "hf": false,
         "files": [
             {
@@ -378,15 +433,30 @@
                 "filename": ""
             },
             {
-                "url": "https://huggingface.co/Comfy-Org/Wan_2.1_ComfyUI_repackaged/resolve/main/split_files/diffusion_models/wan2.1_i2v_720p_14B_fp8_e4m3fn.safetensors?download=true",
-                "directory": "diffusion_models",
+                "url": "https://huggingface.co/Comfy-Org/Wan_2.1_ComfyUI_repackaged/resolve/main/split_files/text_encoders/umt5_xxl_fp16.safetensors?download=true",
+                "directory": "text_encoders",
+                "filename": ""
+            },
+            {
+                "url": "https://huggingface.co/Comfy-Org/Wan_2.1_ComfyUI_repackaged/resolve/main/split_files/vae/wan_2.1_vae.safetensors?download=true",
+                "directory": "vae",
+                "filename": ""
+            },
+            {
+                "url": "https://huggingface.co/Comfy-Org/Wan_2.1_ComfyUI_repackaged/resolve/main/split_files/clip_vision/clip_vision_h.safetensors?download=true",
+                "directory": "clip_vision",
                 "filename": ""
             }
         ]
     },
-    "Wan 2.1 Misc": {
+    "Wan 2.1 I2V 720p FP8": {
         "hf": false,
         "files": [
+            {
+                "url": "https://huggingface.co/Comfy-Org/Wan_2.1_ComfyUI_repackaged/resolve/main/split_files/diffusion_models/wan2.1_i2v_720p_14B_fp8_e4m3fn.safetensors?download=true",
+                "directory": "diffusion_models",
+                "filename": ""
+            },
             {
                 "url": "https://huggingface.co/Comfy-Org/Wan_2.1_ComfyUI_repackaged/resolve/main/split_files/text_encoders/umt5_xxl_fp16.safetensors?download=true",
                 "directory": "text_encoders",
@@ -434,7 +504,7 @@
             }
         ]
     },
-    "Wan 2.2 TI2V": {
+    "Wan 2.2 TI2V FP16": {
         "hf": false,
         "files": [
             {
