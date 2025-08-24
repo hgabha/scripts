@@ -994,7 +994,7 @@
             }
         ]
     },
-    "QWEN > Image Edit Lightning": {
+    "QWEN > Image Edit Lightning 8-step": {
         "hf": false,
         "files": [
             {
@@ -1043,6 +1043,5 @@
                 "filename": ""
             }
         ]
-    },
-
+    }
 }
