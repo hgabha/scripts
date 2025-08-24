@@ -474,7 +474,7 @@
             }
         ]
     },
-    "Wan 2.2 TI2V FP16": {
+    "Wan 2.2 > TI2V FP16": {
         "hf": false,
         "files": [
             {
@@ -499,7 +499,7 @@
             }
         ]
     },
-    "Wan 2.2 TI2V FP8": {
+    "Wan 2.2 > TI2V FP8": {
         "hf": false,
         "files": [
             {
@@ -524,7 +524,7 @@
             }
         ]
     },
-    "Wan 2.2 T2V FP16": {
+    "Wan 2.2 > T2V FP16": {
         "hf": false,
         "files": [
             {
@@ -549,7 +549,7 @@
             }
         ]
     },
-    "Wan 2.2 T2V FP8": {
+    "Wan 2.2 > T2V FP8": {
         "hf": false,
         "files": [
             {
@@ -574,7 +574,7 @@
             }
         ]
     },
-    "Wan 2.2 T2V 5B FP16": {
+    "Wan 2.2 > T2V 5B FP16": {
         "hf": false,
         "files": [
             {
@@ -789,7 +789,7 @@
             }
         ]
     },
-     "Wan 2.2 Fun Camera FP16": {
+     "Wan 2.2 > Fun Camera FP16": {
         "hf": false,
         "files": [
             {
@@ -814,7 +814,7 @@
             }
         ]
     },
-     "Wan 2.2 Fun Camera FP8": {
+     "Wan 2.2 > Fun Camera FP8": {
         "hf": false,
         "files": [
             {
@@ -839,7 +839,7 @@
             }
         ]
     },
-    "Wan 2.2 Fun Control FP16": {
+    "Wan 2.2 > Fun Control FP16": {
         "hf": false,
         "files": [
             {
@@ -864,7 +864,7 @@
             }
         ]
     },
-    "Wan 2.2 Fun Control FP8": {
+    "Wan 2.2 > Fun Control FP8": {
         "hf": false,
         "files": [
             {
@@ -889,7 +889,7 @@
             }
         ]
     },
-    "Wan 2.2 Fun InPaint FP16": {
+    "Wan 2.2 > Fun InPaint FP16": {
         "hf": false,
         "files": [
             {
@@ -914,7 +914,7 @@
             }
         ]
     },
-    "Wan 2.2 Fun InPaint FP8": {
+    "Wan 2.2 > Fun InPaint FP8": {
         "hf": false,
         "files": [
             {
@@ -939,7 +939,7 @@
             }
         ]
     },
-    "Wan 2.2 Lightning": {
+    "Wan 2.2 > Lightning": {
         "hf": false,
         "files": [
             {
@@ -954,7 +954,7 @@
             }
         ]
     },
-    "QWEN Image Edit FP16": {
+    "QWEN > Image Edit FP16": {
         "hf": false,
         "files": [
             {
@@ -974,7 +974,7 @@
             }
         ]
     },
-    "QWEN Image Edit FP8": {
+    "QWEN > Image Edit FP8": {
         "hf": false,
         "files": [
             {
@@ -993,5 +993,56 @@
                 "filename": ""
             }
         ]
-    }
+    },
+    "QWEN > Image Edit Lightning": {
+        "hf": false,
+        "files": [
+            {
+                "url": "https://huggingface.co/lightx2v/Qwen-Image-Lightning/resolve/main/Qwen-Image-Edit-Lightning-8steps-V1.0-bf16.safetensors?download=true",
+                "directory": "loras",
+                "filename": ""
+            },
+            {
+                "url": "https://huggingface.co/lightx2v/Qwen-Image-Lightning/resolve/main/Qwen-Image-Edit-Lightning-8steps-V1.0.safetensors?download=true",
+                "directory": "loras",
+                "filename": ""
+            }
+        ]
+    },
+    "QWEN > Image Lightning 4-step": {
+        "hf": false,
+        "files": [
+            {
+                "url": "https://huggingface.co/lightx2v/Qwen-Image-Lightning/resolve/main/Qwen-Image-Lightning-4steps-V1.0-bf16.safetensors?download=true",
+                "directory": "loras",
+                "filename": ""
+            },
+            {
+                "url": "https://huggingface.co/lightx2v/Qwen-Image-Lightning/resolve/main/Qwen-Image-Lightning-4steps-V1.0.safetensors?download=true",
+                "directory": "loras",
+                "filename": ""
+            }
+        ]
+    },
+    "QWEN > Image Lightning 8-step": {
+        "hf": false,
+        "files": [
+            {
+                "url": "https://huggingface.co/lightx2v/Qwen-Image-Lightning/resolve/main/Qwen-Image-Lightning-8steps-V1.0.safetensors?download=true",
+                "directory": "loras",
+                "filename": ""
+            },
+            {
+                "url": "https://huggingface.co/lightx2v/Qwen-Image-Lightning/resolve/main/Qwen-Image-Lightning-8steps-V1.1-bf16.safetensors?download=true",
+                "directory": "loras",
+                "filename": ""
+            },
+            {
+                "url": "https://huggingface.co/lightx2v/Qwen-Image-Lightning/resolve/main/Qwen-Image-Lightning-8steps-V1.1.safetensors?download=true",
+                "directory": "loras",
+                "filename": ""
+            }
+        ]
+    },
+
 }
