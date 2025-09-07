@@ -214,6 +214,31 @@
             }
         ]
     },
+    "ByteDance USO": {
+        "hf": false,
+        "files": [
+            {
+                "url": "https://huggingface.co/Comfy-Org/flux1-dev/resolve/main/flux1-dev-fp8.safetensors?download=true",
+                "directory": "checkpoints",
+                "filename": ""
+            },
+            {
+                "url": "https://huggingface.co/Comfy-Org/USO_1.0_Repackaged/resolve/main/split_files/loras/uso-flux1-dit-lora-v1.safetensors?download=true",
+                "directory": "loras",
+                "filename": ""
+            },
+            {
+                "url": "https://huggingface.co/Comfy-Org/USO_1.0_Repackaged/resolve/main/split_files/model_patches/uso-flux1-projector-v1.safetensors?download=true",
+                "directory": "model_patches",
+                "filename": ""
+            },
+            {
+                "url": "https://huggingface.co/Comfy-Org/sigclip_vision_384/resolve/main/sigclip_vision_patch14_384.safetensors?download=true",
+                "directory": "clip_vision",
+                "filename": ""
+            }
+        ]
+    },
     "FLUX Dev Tools - Fill and Redux": {
         "hf": true,
         "files": [
