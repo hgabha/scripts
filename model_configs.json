@@ -309,6 +309,81 @@
             }
         ]
     },
+    "SRPO Flux Dev - Refined FP8": {
+        "hf": true,
+        "files": [
+            {
+                "url": "https://huggingface.co/wikeeyang/SRPO-Refine-Quantized-v1.0/resolve/main/Flux1-Dev-SRPO-v1-fp8.safetensors?download=true",
+                "directory": "diffusion_models",
+                "filename": ""
+            },
+            {
+                "url": "https://huggingface.co/black-forest-labs/FLUX.1-dev/resolve/main/ae.safetensors?download=true",
+                "directory": "vae",
+                "filename": ""
+            },
+            {
+                "url": "https://huggingface.co/comfyanonymous/flux_text_encoders/resolve/main/t5xxl_fp16.safetensors?download=true",
+                "directory": "clip",
+                "filename": ""
+            },
+            {
+                "url": "https://huggingface.co/comfyanonymous/flux_text_encoders/resolve/main/clip_l.safetensors?download=true",
+                "directory": "clip",
+                "filename": ""
+            }
+        ]
+    },
+    "SRPO Flux Dev - Tencent": {
+        "hf": true,
+        "files": [
+            {
+                "url": "https://huggingface.co/tencent/SRPO/resolve/main/diffusion_pytorch_model.safetensors?download=true",
+                "directory": "diffusion_models",
+                "filename": "SRPO FLUX Dev Tencent.safetensors"
+            },
+            {
+                "url": "https://huggingface.co/black-forest-labs/FLUX.1-dev/resolve/main/ae.safetensors?download=true",
+                "directory": "vae",
+                "filename": ""
+            },
+            {
+                "url": "https://huggingface.co/comfyanonymous/flux_text_encoders/resolve/main/t5xxl_fp16.safetensors?download=true",
+                "directory": "clip",
+                "filename": ""
+            },
+            {
+                "url": "https://huggingface.co/comfyanonymous/flux_text_encoders/resolve/main/clip_l.safetensors?download=true",
+                "directory": "clip",
+                "filename": ""
+            }
+        ]
+    },
+    "SRPO Flux Dev - RockerBOO": {
+        "hf": true,
+        "files": [
+            {
+                "url": "https://huggingface.co/rockerBOO/flux.1-dev-SRPO/resolve/main/flux.1-dev-SRPO-bf16.safetensors?download=true",
+                "directory": "diffusion_models",
+                "filename": ""
+            },
+            {
+                "url": "https://huggingface.co/black-forest-labs/FLUX.1-dev/resolve/main/ae.safetensors?download=true",
+                "directory": "vae",
+                "filename": ""
+            },
+            {
+                "url": "https://huggingface.co/comfyanonymous/flux_text_encoders/resolve/main/t5xxl_fp16.safetensors?download=true",
+                "directory": "clip",
+                "filename": ""
+            },
+            {
+                "url": "https://huggingface.co/comfyanonymous/flux_text_encoders/resolve/main/clip_l.safetensors?download=true",
+                "directory": "clip",
+                "filename": ""
+            }
+        ]
+    },
     "Qwen Image Full BF16": {
         "hf": false,
         "files": [
