@@ -310,7 +310,7 @@
         ]
     },
     "SRPO Flux Dev - Refined FP8": {
-        "hf": true,
+        "hf": false,
         "files": [
             {
                 "url": "https://huggingface.co/wikeeyang/SRPO-Refine-Quantized-v1.0/resolve/main/Flux1-Dev-SRPO-v1-fp8.safetensors?download=true",
@@ -335,7 +335,7 @@
         ]
     },
     "SRPO Flux Dev - Tencent": {
-        "hf": true,
+        "hf": false,
         "files": [
             {
                 "url": "https://huggingface.co/tencent/SRPO/resolve/main/diffusion_pytorch_model.safetensors?download=true",
@@ -360,7 +360,7 @@
         ]
     },
     "SRPO Flux Dev - RockerBOO": {
-        "hf": true,
+        "hf": false,
         "files": [
             {
                 "url": "https://huggingface.co/rockerBOO/flux.1-dev-SRPO/resolve/main/flux.1-dev-SRPO-bf16.safetensors?download=true",
