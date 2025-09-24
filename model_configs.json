@@ -1039,6 +1039,26 @@
             }
         ]
     },
+    "Wan 2.2 > Animate": {
+        "hf": false,
+        "files": [
+            {
+                "url": "https://huggingface.co/Comfy-Org/Wan_2.2_ComfyUI_Repackaged/resolve/main/split_files/diffusion_models/wan2.2_animate_14B_bf16.safetensors?download=true",
+                "directory": "diffusion_models",
+                "filename": ""
+            },
+            {
+                "url": "https://huggingface.co/Comfy-Org/Wan_2.1_ComfyUI_repackaged/resolve/main/split_files/text_encoders/umt5_xxl_fp16.safetensors?download=true",
+                "directory": "text_encoders",
+                "filename": ""
+            },
+            {
+                "url": "https://huggingface.co/Comfy-Org/Wan_2.1_ComfyUI_repackaged/resolve/main/split_files/vae/wan_2.1_vae.safetensors?download=true",
+                "directory": "vae",
+                "filename": ""
+            }
+        ]
+    },
     "Wan 2.2 > Lightning": {
         "hf": false,
         "files": [
@@ -1074,11 +1094,51 @@
             }
         ]
     },
+    "QWEN > Image Edit 2509 FP16": {
+        "hf": false,
+        "files": [
+            {
+                "url": "https://huggingface.co/Comfy-Org/Qwen-Image-Edit_ComfyUI/resolve/main/split_files/diffusion_models/qwen_image_edit_2509_bf16.safetensors?download=true",
+                "directory": "diffusion_models",
+                "filename": ""
+            },
+            {
+                "url": "https://huggingface.co/Comfy-Org/Qwen-Image_ComfyUI/resolve/main/split_files/text_encoders/qwen_2.5_vl_7b.safetensors?download=true",
+                "directory": "text_encoders",
+                "filename": ""
+            },
+            {
+                "url": "https://huggingface.co/Comfy-Org/Qwen-Image_ComfyUI/resolve/main/split_files/vae/qwen_image_vae.safetensors?download=true",
+                "directory": "vae",
+                "filename": ""
+            }
+        ]
+    },
     "QWEN > Image Edit FP8": {
         "hf": false,
         "files": [
             {
                 "url": "https://huggingface.co/Comfy-Org/Qwen-Image-Edit_ComfyUI/resolve/main/split_files/diffusion_models/qwen_image_edit_fp8_e4m3fn.safetensors?download=true",
+                "directory": "diffusion_models",
+                "filename": ""
+            },
+            {
+                "url": "https://huggingface.co/Comfy-Org/Qwen-Image_ComfyUI/resolve/main/split_files/text_encoders/qwen_2.5_vl_7b_fp8_scaled.safetensors?download=true",
+                "directory": "text_encoders",
+                "filename": ""
+            },
+            {
+                "url": "https://huggingface.co/Comfy-Org/Qwen-Image_ComfyUI/resolve/main/split_files/vae/qwen_image_vae.safetensors?download=true",
+                "directory": "vae",
+                "filename": ""
+            }
+        ]
+    },
+    "QWEN > Image Edit 2509 FP8": {
+        "hf": false,
+        "files": [
+            {
+                "url": "https://huggingface.co/Comfy-Org/Qwen-Image-Edit_ComfyUI/resolve/main/split_files/diffusion_models/qwen_image_edit_2509_fp8_e4m3fn.safetensors?download=true",
                 "directory": "diffusion_models",
                 "filename": ""
             },
