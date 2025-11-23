@@ -1219,6 +1219,21 @@
             }
         ]
     },
+    "QWEN > Image Edit 2509 Upscale LoRA": {
+        "hf": false,
+        "files": [
+            {
+                "url": "https://huggingface.co/vafipas663/Qwen-Edit-2509-Upscale-LoRA/resolve/main/qwen-edit-enhance_000004250.safetensors?download=true",
+                "directory": "loras",
+                "filename": ""
+            },
+            {
+                "url": "https://huggingface.co/vafipas663/Qwen-Edit-2509-Upscale-LoRA/resolve/main/qwen-edit-enhance_64-v3_000001000.safetensors?download=true",
+                "directory": "loras",
+                "filename": ""
+            }
+        ]
+    },
     "QWEN > Image Lightning 8-step": {
         "hf": false,
         "files": [
