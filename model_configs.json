@@ -104,7 +104,7 @@
             }
         ]
     },
-    "FLUX Dev": {
+    "FLUX.1 Dev": {
         "hf": true,
         "files": [
             {
@@ -129,7 +129,7 @@
             }
         ]
     },
-    "FLUX Schnell": {
+    "FLUX.1 Schnell": {
         "hf": true,
         "files": [
             {
@@ -204,12 +204,52 @@
             }
         ]
     },
-    "FLUX Dev FP8": {
+    "FLUX.1 Dev FP8": {
         "hf": false,
         "files": [
             {
                 "url": "https://huggingface.co/Comfy-Org/flux1-dev/resolve/main/flux1-dev-fp8.safetensors?download=true",
                 "directory": "checkpoints",
+                "filename": ""
+            }
+        ]
+    },
+    "FLUX.2 Dev FP8": {
+        "hf": false,
+        "files": [
+            {
+                "url": "https://huggingface.co/Comfy-Org/flux2-dev/resolve/main/split_files/diffusion_models/flux2_dev_fp8mixed.safetensors?download=true",
+                "directory": "diffusion_models",
+                "filename": ""
+            },
+            {
+                "url": "https://huggingface.co/Comfy-Org/flux2-dev/resolve/main/split_files/vae/flux2-vae.safetensors?download=true",
+                "directory": "vae",
+                "filename": ""
+            },
+            {
+                "url": "https://huggingface.co/Comfy-Org/flux2-dev/resolve/main/split_files/text_encoders/mistral_3_small_flux2_fp8.safetensors?download=true",
+                "directory": "clip",
+                "filename": ""
+            }
+        ]
+    },
+    "FLUX.2 Dev": {
+        "hf": true,
+        "files": [
+            {
+                "url": "https://huggingface.co/black-forest-labs/FLUX.2-dev/resolve/main/flux2-dev.safetensors?download=true",
+                "directory": "diffusion_models",
+                "filename": ""
+            },
+            {
+                "url": "https://huggingface.co/black-forest-labs/FLUX.2-dev/resolve/main/ae.safetensors?download=true",
+                "directory": "vae",
+                "filename": "flux2-ae.safetensors"
+            },
+            {
+                "url": "https://huggingface.co/Comfy-Org/flux2-dev/resolve/main/split_files/text_encoders/mistral_3_small_flux2_bf16.safetensors?download=true",
+                "directory": "clip",
                 "filename": ""
             }
         ]
