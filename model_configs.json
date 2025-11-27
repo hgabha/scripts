@@ -329,6 +329,26 @@
             }
         ]
     },
+    "Z Image Turbo": {
+        "hf": false,
+        "files": [
+            {
+                "url": "https://huggingface.co/Comfy-Org/z_image_turbo/resolve/main/split_files/diffusion_models/z_image_turbo_bf16.safetensors?download=true",
+                "directory": "diffusion_models",
+                "filename": ""
+            },
+            {
+                "url": "https://huggingface.co/Comfy-Org/z_image_turbo/resolve/main/split_files/vae/ae.safetensors?download=true",
+                "directory": "vae",
+                "filename": ""
+            },
+            {
+                "url": "https://huggingface.co/Comfy-Org/z_image_turbo/resolve/main/split_files/text_encoders/qwen_3_4b.safetensors?download=true",
+                "directory": "text_encoders",
+                "filename": ""
+            }
+        ]
+    },
     "Chroma v50 by lodestones": {
         "hf": false,
         "files": [
