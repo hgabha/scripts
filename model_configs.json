@@ -394,7 +394,7 @@
             }
         ]
     },
-    "SRPO Flux Dev - Tencent": {
+    "SRPO Flux Dev - Tencent (Full 47GB)": {
         "hf": false,
         "files": [
             {
@@ -419,7 +419,7 @@
             }
         ]
     },
-    "SRPO Flux Dev - RockerBOO": {
+    "SRPO Flux Dev - RockerBOO BF16": {
         "hf": false,
         "files": [
             {
