@@ -1294,12 +1294,12 @@
         "files": [
             {
                 "url": "https://huggingface.co/lightx2v/Qwen-Image-Lightning/resolve/main/Qwen-Image-Edit-Lightning-8steps-V1.0-bf16.safetensors?download=true",
-                "directory": "loras",
+                "directory": "loras/qwen",
                 "filename": ""
             },
             {
                 "url": "https://huggingface.co/lightx2v/Qwen-Image-Lightning/resolve/main/Qwen-Image-Edit-Lightning-8steps-V1.0.safetensors?download=true",
-                "directory": "loras",
+                "directory": "loras/qwen",
                 "filename": ""
             }
         ]
@@ -1309,12 +1309,27 @@
         "files": [
             {
                 "url": "https://huggingface.co/lightx2v/Qwen-Image-Lightning/resolve/main/Qwen-Image-Lightning-4steps-V1.0-bf16.safetensors?download=true",
-                "directory": "loras",
+                "directory": "loras/qwen",
                 "filename": ""
             },
             {
                 "url": "https://huggingface.co/lightx2v/Qwen-Image-Lightning/resolve/main/Qwen-Image-Lightning-4steps-V1.0.safetensors?download=true",
-                "directory": "loras",
+                "directory": "loras/qwen",
+                "filename": ""
+            }
+        ]
+    },
+    "QWEN > Image Edit 2511 Lightning 4-step": {
+        "hf": false,
+        "files": [
+            {
+                "url": "https://huggingface.co/lightx2v/Qwen-Image-Edit-2511-Lightning/resolve/main/Qwen-Image-Edit-2511-Lightning-4steps-V1.0-bf16.safetensors?download=true",
+                "directory": "loras/qwen",
+                "filename": ""
+            },
+            {
+                "url": "https://huggingface.co/lightx2v/Qwen-Image-Edit-2511-Lightning/resolve/main/Qwen-Image-Edit-2511-Lightning-4steps-V1.0-fp32.safetensors?download=true",
+                "directory": "loras/qwen",
                 "filename": ""
             }
         ]
@@ -1324,12 +1339,12 @@
         "files": [
             {
                 "url": "https://huggingface.co/vafipas663/Qwen-Edit-2509-Upscale-LoRA/resolve/main/qwen-edit-enhance_000004250.safetensors?download=true",
-                "directory": "loras",
+                "directory": "loras/qwen",
                 "filename": ""
             },
             {
                 "url": "https://huggingface.co/vafipas663/Qwen-Edit-2509-Upscale-LoRA/resolve/main/qwen-edit-enhance_64-v3_000001000.safetensors?download=true",
-                "directory": "loras",
+                "directory": "loras/qwen",
                 "filename": ""
             }
         ]
@@ -1339,17 +1354,17 @@
         "files": [
             {
                 "url": "https://huggingface.co/lightx2v/Qwen-Image-Lightning/resolve/main/Qwen-Image-Lightning-8steps-V1.0.safetensors?download=true",
-                "directory": "loras",
+                "directory": "loras/qwen",
                 "filename": ""
             },
             {
                 "url": "https://huggingface.co/lightx2v/Qwen-Image-Lightning/resolve/main/Qwen-Image-Lightning-8steps-V1.1-bf16.safetensors?download=true",
-                "directory": "loras",
+                "directory": "loras/qwen",
                 "filename": ""
             },
             {
                 "url": "https://huggingface.co/lightx2v/Qwen-Image-Lightning/resolve/main/Qwen-Image-Lightning-8steps-V1.1.safetensors?download=true",
-                "directory": "loras",
+                "directory": "loras/qwen",
                 "filename": ""
             }
         ]
