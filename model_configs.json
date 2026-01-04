@@ -204,6 +204,16 @@
             }
         ]
     },
+    "FLUX.1 UltraFlux VAE": {
+        "hf": false,
+        "files": [
+            {
+                "url": "https://huggingface.co/Owen777/UltraFlux-v1/resolve/main/vae/diffusion_pytorch_model.safetensors?download=true",
+                "directory": "vae",
+                "filename": "UltraFlux-VAE.safetensors"
+            }
+        ]
+    },
     "FLUX.1 Dev FP8": {
         "hf": false,
         "files": [
