@@ -264,6 +264,126 @@
             }
         ]
     },
+    "FLUX.2 Klien 9B Distilled": {
+        "hf": true,
+        "files": [
+            {
+                "url": "https://huggingface.co/black-forest-labs/FLUX.2-klein-9B/resolve/main/flux-2-klein-9b.safetensors?download=true",
+                "directory": "diffusion_models",
+                "filename": ""
+            },
+            {
+                "url": "https://huggingface.co/Comfy-Org/flux2-klein-9B/resolve/main/split_files/vae/flux2-vae.safetensors?download=true",
+                "directory": "vae",
+                "filename": ""
+            },
+            {
+                "url": "https://huggingface.co/Comfy-Org/flux2-klein-9B/resolve/main/split_files/text_encoders/qwen_3_8b_fp8mixed.safetensors?download=true",
+                "directory": "clip",
+                "filename": ""
+            }
+        ]
+    },
+    "FLUX.2 Klien 9B Base": {
+        "hf": true,
+        "files": [
+            {
+                "url": "https://huggingface.co/black-forest-labs/FLUX.2-klein-base-9B/resolve/main/flux-2-klein-base-9b.safetensors?download=true",
+                "directory": "diffusion_models",
+                "filename": ""
+            },
+            {
+                "url": "https://huggingface.co/Comfy-Org/flux2-klein-9B/resolve/main/split_files/vae/flux2-vae.safetensors?download=true",
+                "directory": "vae",
+                "filename": ""
+            },
+            {
+                "url": "https://huggingface.co/Comfy-Org/flux2-klein-9B/resolve/main/split_files/text_encoders/qwen_3_8b.safetensors?download=true",
+                "directory": "clip",
+                "filename": ""
+            }
+        ]
+    },
+    "FLUX.2 Klien 9B Distilled FP8": {
+        "hf": true,
+        "files": [
+            {
+                "url": "https://huggingface.co/black-forest-labs/FLUX.2-klein-9b-fp8/resolve/main/flux-2-klein-9b-fp8.safetensors?download=true",
+                "directory": "diffusion_models",
+                "filename": ""
+            },
+            {
+                "url": "https://huggingface.co/Comfy-Org/flux2-klein-9B/resolve/main/split_files/vae/flux2-vae.safetensors?download=true",
+                "directory": "vae",
+                "filename": ""
+            },
+            {
+                "url": "https://huggingface.co/Comfy-Org/flux2-klein-9B/resolve/main/split_files/text_encoders/qwen_3_8b_fp8mixed.safetensors?download=true",
+                "directory": "clip",
+                "filename": ""
+            }
+        ]
+    },
+    "FLUX.2 Klien 9B Base FP8": {
+        "hf": true,
+        "files": [
+            {
+                "url": "https://huggingface.co/black-forest-labs/FLUX.2-klein-9b-fp8/resolve/main/flux-2-klein-9b-fp8.safetensors?download=true",
+                "directory": "diffusion_models",
+                "filename": ""
+            },
+            {
+                "url": "https://huggingface.co/Comfy-Org/flux2-klein-9B/resolve/main/split_files/vae/flux2-vae.safetensors?download=true",
+                "directory": "vae",
+                "filename": ""
+            },
+            {
+                "url": "https://huggingface.co/Comfy-Org/flux2-klein-9B/resolve/main/split_files/text_encoders/qwen_3_8b_fp8mixed.safetensors?download=true",
+                "directory": "clip",
+                "filename": ""
+            }
+        ]
+    },
+    "FLUX.2 Klien 4B Distilled": {
+        "hf": false,
+        "files": [
+            {
+                "url": "https://huggingface.co/black-forest-labs/FLUX.2-klein-4B/resolve/main/flux-2-klein-4b.safetensors?download=true",
+                "directory": "diffusion_models",
+                "filename": ""
+            },
+            {
+                "url": "https://huggingface.co/Comfy-Org/flux2-klein-9B/resolve/main/split_files/vae/flux2-vae.safetensors?download=true",
+                "directory": "vae",
+                "filename": ""
+            },
+            {
+                "url": "https://huggingface.co/Comfy-Org/flux2-klein-4B/resolve/main/split_files/text_encoders/qwen_3_4b.safetensors?download=true",
+                "directory": "clip",
+                "filename": ""
+            }
+        ]
+    },
+    "FLUX.2 Klien 4B Base": {
+        "hf": false,
+        "files": [
+            {
+                "url": "https://huggingface.co/black-forest-labs/FLUX.2-klein-base-4B/resolve/main/flux-2-klein-base-4b.safetensors?download=true",
+                "directory": "diffusion_models",
+                "filename": ""
+            },
+            {
+                "url": "https://huggingface.co/Comfy-Org/flux2-klein-9B/resolve/main/split_files/vae/flux2-vae.safetensors?download=true",
+                "directory": "vae",
+                "filename": ""
+            },
+            {
+                "url": "https://huggingface.co/Comfy-Org/flux2-klein-4B/resolve/main/split_files/text_encoders/qwen_3_4b.safetensors?download=true",
+                "directory": "clip",
+                "filename": ""
+            }
+        ]
+    },
     "ByteDance USO": {
         "hf": false,
         "files": [
