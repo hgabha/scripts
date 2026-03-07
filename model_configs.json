@@ -759,6 +759,61 @@
             }
         ]
     },
+    "LTX-2.3 22b DEV Full": {
+        "hf": false,
+        "files": [
+            {
+                "url": "https://huggingface.co/Lightricks/LTX-2.3/resolve/main/ltx-2.3-22b-dev.safetensors?download=true",
+                "directory": "checkpoints",
+                "filename": ""
+            },
+            {
+                "url": "https://huggingface.co/Comfy-Org/ltx-2/resolve/main/split_files/text_encoders/gemma_3_12B_it.safetensors?download=true",
+                "directory": "text_encoders",
+                "filename": ""
+            }
+        ]
+    },
+    "LTX-2.3 22b DEV FP8": {
+        "hf": false,
+        "files": [
+            {
+                "url": "https://huggingface.co/Lightricks/LTX-2.3/resolve/main/ltx-2.3-22b-distilled.safetensors?download=true",
+                "directory": "checkpoints",
+                "filename": ""
+            },
+            {
+                "url": "https://huggingface.co/Comfy-Org/ltx-2/resolve/main/split_files/text_encoders/gemma_3_12B_it.safetensors?download=true",
+                "directory": "text_encoders",
+                "filename": ""
+            }
+        ]
+    },
+    "LTX-2.3 LoRAs & Upscale": {
+        "hf": false,
+        "files": [
+            {
+                "url": "https://huggingface.co/Lightricks/LTX-2.3/resolve/main/ltx-2.3-22b-distilled-lora-384.safetensors?download=true",
+                "directory": "loras/ltx",
+                "filename": ""
+            },
+            {
+                "url": "https://huggingface.co/Lightricks/LTX-2.3/resolve/main/ltx-2.3-spatial-upscaler-x1.5-1.0.safetensors?download=true",
+                "directory": "latent_upscale_models",
+                "filename": ""
+            },
+            {
+                "url": "https://huggingface.co/Lightricks/LTX-2.3/resolve/main/ltx-2.3-spatial-upscaler-x2-1.0.safetensors?download=true",
+                "directory": "latent_upscale_models",
+                "filename": ""
+            },
+            {
+                "url": "https://huggingface.co/Lightricks/LTX-2.3/resolve/main/ltx-2.3-temporal-upscaler-x2-1.0.safetensors?download=true",
+                "directory": "latent_upscale_models",
+                "filename": ""
+            }
+        ]
+    },
     "Wan 2.1 T2V FP8": {
         "hf": false,
         "files": [
